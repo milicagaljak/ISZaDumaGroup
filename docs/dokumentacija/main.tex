@@ -61,8 +61,118 @@
 %\date{9.~april 2015.}
 
 \maketitle
+
+\abstract{
+%Ovde ide abstract
+}
+
+\tableofcontents
+
 \newpage
+
+\section{Uvod}
+
 \section{Slučajevi upotrebe}
+
+% Ovo je moj deo - Miloš
+
+\subsection{Registrovanje i prijavljivanje korisnika}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8cm]{Slucaj upotrebe _Registrovanje.jpg}
+    \caption{Dijagram slučaja upotrebe Registracija korisnika}
+    \label{fig:Registracija}
+\end{figure}
+
+\subsubsection{Registrovanje korisnika}
+
+\begin{itemize}
+    \item Kratak opis:
+        \begin{itemize}
+            \item Korisnik se registruje kako bi mogao da koristi mogućnosti informacionog sistema Duma Group
+        \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+            \item Korisnik koji želi da koristi usluge Duma Group sistema
+        \end{itemize}
+    \item Preduslov:
+        \begin{itemize}
+            \item Korisnik mora da priloži tačne podatke pri registraciji
+            \item Korisnik poseduje računar ili pametni telefon i pristup Internetu
+            \item Sistem je u funkciji
+        \end{itemize}
+    \item Postuslov:
+        \begin{itemize}
+            \item Osoba je registrovana i otvoren joj je nalog za korišćenje sistema
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item  Korisnik otvara stranicu za registraciju odabirom određenog dugmeta na sajtu sistema
+            \item Korisnik čita uslove korišćenja sistema 
+            \item Korisnik prihvata postavljene uslove
+            \item Korisnik popunjava formular unoseći tražene lične podatke. Kada zavši popunjavanje formulara pritiska dugme za registraciju
+            \item Sistem obrađuje podatke i vrši validaciju
+            \item Sistem kreira privremeni korisnički nalog
+            \item Sistem šalje korisniku poruku na e-mail adresu unetu u formularu i čeka na potvrdu određeni period
+            \item Korisnik proverava poštu i potvrđuje link za registraciju
+            \item Sistem obeležava korisnički nalog kao aktivan
+            \item Sistem obaveštava korisnika slanjem poruke na e-mail adresu korisnika da je nalog uspešno kreiran 
+        \end{enumerate}
+    \item Alternativni tok:
+        \begin{itemize}
+            \item Prilikom 2. koraka glavnog toka korisnik odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja i onemogućava dalji tok registracije dok korisnik ne prihvati date uslove.
+            \item Prilikom koraka 5. ukoliko korisnik nije uneo ispravne podatke, sistem obaveštava korisnika i proces se nastavlja od koraka 4.
+            \item Ukoliko korisnik nije prihvatio aktivacionu poruku u koraku 8. u određenom vremenskom periodu, sistem briše nalog i proces se završava.
+            \item Ukoliko u koraku 8. korisnik nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku
+        \end{itemize}
+    \item Dodatne informacije:
+        \begin{itemize}
+            \item Potrebni podaci za registraciju su korisničko ime, lozinka, potvrda lozinke, ime, prezime, e-mail naloga, e-mail za povratak naloga ako se desi da je korisnik zaboravi lozinku ili korisničko ime, datum rodjenja korisnika, pol korisnika
+        \end{itemize}
+\end{itemize}
+
+
+\subsubsection{Prijavljivanje korisnika}
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8cm]{Slucaj upotrebe _Prijavljivanje.jpg}
+    \caption{Dijagram slučaja upotrebe Prijavljivanje korisnika}
+    \label{fig:Prijavljivanje}
+\end{figure}
+
+\begin{itemize}
+    \item Kratak opis:
+        \begin{itemize}
+            \item --
+        \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+            \item --
+        \end{itemize}
+    \item Preduslov:
+        \begin{itemize}
+            \item --
+        \end{itemize}
+    \item Postuslov:
+        \begin{itemize}
+            \item --
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item  --
+        \end{enumerate}
+    \item Alternativni tok:
+        \begin{itemize}
+            \item --
+        \end{itemize}
+    \item Dodatne informacije:
+        \begin{itemize}
+            \item --
+        \end{itemize}
+\end{itemize}
+
 
 %Ovo je moj deo - Veronika
 
@@ -256,4 +366,72 @@
     
 \end{itemize}
 
+\subsection{Rad sa zaposlenima u firmi}
+
+\subsubsection{Registracija zaposlenih}
+\begin{itemize}
+    \item Kratak opis: 
+    \begin{itemize}
+        \item Zaposleni u firmi se registruje popunjavanjem osnovnih podataka. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
+    \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+        \item Neregistrovani zaposleni
+    \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Osoba je zaposlena u firmi
+            \item Zaposleni ima pristup internetu
+            \item Sistem je u funkciji
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Zaposleni je registrovan ili nije i dobija informaciju o tome
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Zaposleni pristupa stranici za registraciju
+            \item Zaposleni popunjava formular o sopstvenim podacima 
+            \item Sistem vrši validaciju podataka 
+            \item Sistem zaposlenom šalje mejl sa privremenim linkom za potvrdu
+            \item Zaposleni potvrđuje link za potvrdu i čeka potvrdu o registracija
+            \item Sistem potvrđuje nalog kao aktivan
+            \item Sistem obaveštava korisnika da je 
+        \end{enumerate}
+    \item Alternativni tokovi:
+        \begin{itemize}
+            \item Neuspešna validacija - Ukoliko zaposleni nije uneo ispravne podatke, sistem obaveštava korisnika o tome i proces se nastavlja u koraku 2.
+            \item Link za registraciju nije stigao - Ukoliko u koraku 5 zaposlenom nije stigao mejl za potvrdu, on obaveštava sistem kako bi mu poslao novi link za potvrdu. Proces se nastavlja u koraku 4.
+            \item Link za registraciju je istekao - Ukoliko u koraku 5, zaposleni ne potvrdi registraciju u određenom periodu, sistem briše nalog i proces se završava.
+        \end{itemize}
+    \item Dodatne informacije:
+        \begin{itemize}
+            \item Neophodni podaci za prijavu su ime, prezime, e-mail adresa, pozicija zaposlenog u firmi, lozinka i potvrđena lozinka.
+        \end{itemize}
+\end{itemize}
+
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
