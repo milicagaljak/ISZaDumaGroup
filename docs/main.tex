@@ -372,7 +372,7 @@
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Zaposleni u firmi se registruje popunjavanjem osnovnih podataka. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
+        \item Zaposleni u firmi se registruje na sistem Douma Group firme popunjavanjem osnovnih podataka. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
@@ -380,13 +380,13 @@
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Osoba je zaposlena u firmi
-            \item Zaposleni ima pristup internetu
+            \item Osoba koja pokušava da se registruje je zaposlena u firmi
+            \item Zaposleni ima pristup internetu, računaru ili pametnom telefonu
             \item Sistem je u funkciji
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Zaposleni je registrovan ili nije i dobija informaciju o tome
+            \item Zaposleni je registrovan u sistem i dobija informaciju o tome
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
@@ -396,7 +396,7 @@
             \item Sistem zaposlenom šalje mejl sa privremenim linkom za potvrdu
             \item Zaposleni potvrđuje link za potvrdu i čeka potvrdu o registracija
             \item Sistem potvrđuje nalog kao aktivan
-            \item Sistem obaveštava korisnika da je 
+            \item Sistem obaveštava korisnika da je uspešno registrovan 
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
@@ -407,6 +407,39 @@
     \item Dodatne informacije:
         \begin{itemize}
             \item Neophodni podaci za prijavu su ime, prezime, e-mail adresa, pozicija zaposlenog u firmi, lozinka i potvrđena lozinka.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Otpuštanje zaposlenog}
+\begin{itemize}
+    \item Kratak opis: 
+    \begin{itemize}
+        \item Prekida se radni odnos sa zaposlenim.
+    \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+        \item Zaposleni
+        \item CEO menadžer
+    \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Korisnici nisu zadovoljni uslugom koju je zaposleni pružio
+            \item Poslodavac nije zadovoljan radom zaposlenog
+            \item Zaposleni nije zadovoljan uslovima rada
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Zaposleni dobija otkaz i obrisan mu je nalog
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item CEO menadžer pokreće postupak prekida radnog odnosa sa zaposlenim
+            \item Zaposleni dobija otkaz
+            \item Korisnički nalog je obrisan
+        \end{enumerate}
+    \item Alternativni tokovi:
+        \begin{itemize}
+            \item Prilikom koraka 2, zaposleni svojevoljno daje otkaz
         \end{itemize}
 \end{itemize}
 
