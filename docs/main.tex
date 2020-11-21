@@ -7,6 +7,9 @@
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
 \usepackage{graphicx}
+\usepackage{here} 
+
+
 
 \usepackage[english,serbian]{babel}
 %\usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
@@ -91,11 +94,11 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \subsection{Učesnici u sistemu}
     
     \begin{enumerate}
-        \item Korisnik
+        \item Klijent
         \item CEO menadžer
         \item Menadžer za ketering
         \item Menadžer za fotografiju
-        \item Menadžer za fotografiju
+        \item Menadžer za prenosivi bar
         \item Osoblje
         \item Šef kuhinje
         \item Predstavnik foto studija
@@ -207,16 +210,14 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
 \end{itemize}
 
-
 %Ovo je moj deo - Veronika
+
 
 \subsection{Prenosivi bar}
 
-%Ovde ide slika dijagrama i opis
-
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Slucaj upotrebe _ Prenosivi bar.jpg}
+    \includegraphics[width=8cm]{Dijagram slucaja upotrebe _ Prenosivi bar.jpg}
     \caption{Dijagram slučaja upotrebe Prenosivi bar}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -226,37 +227,36 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Korisnik bira odgovarajuću ponudu u skladu sa događajem za koji mu je usluga potrebna
+            \item Klijent bira odgovarajuću ponudu u skladu sa događajem za koji mu je usluga potrebna
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Korisnik
+            \item Klijent
             \item Menadžer za prenosivi bar
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Korisnik se registrovao na sajt ili je pozvao telefonom
+            \item Klijent se registrovao na sajt
 		    \item Na raspolaganju je spisak ponuda sa pratećim informacijama, slikama i snimcima
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
-            \item Korisnik je odabrao odgovarajuću ponudu
+            \item Klijent je odabrao odgovarajuću ponudu
             \item Menadžer je prihvatio odabir i zabeležio potrebne detalje
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item  Korisnik se registruje na sajt
-		    \item Opredeljuje se za uslugu ''Prenosivi bar''
-		    \item Stupa u kontakt sa menadžerom za ovu uslugu
-		    \item Korisnik objašnjava menadžeru kog je tipa događaj i za šta mu je potreban bar
+		    \item Klijent se opredeljuje za uslugu ''Prenosivi bar''
+		    \item Klijent stupa u kontakt sa menadžerom za ovu uslugu
+		    \item Klijent objašnjava menadžeru kog je tipa događaj i za šta mu je potreban bar
 		    \item Menadžer mu na mejl šalje ponudu iz ''Prenosivog bara'' sa pratećim informacijama o ceni, slikama i snimcima
-		    \item Korisnik bira sadržaj koji želi iz ponude
-		    \item Korisnik i menadžer dogovaraju detalje o datumu događaja, njegovom trajanju, da li je potrebno da na događaju bude i barmen, dodatnim zahtevima i upitima
-		    \item Menadžer je primio sve potrebne detalje o događaju i rezervisao je odgovarajući datum
+		    \item Klijent bira sadržaj koji želi iz ponude
+		    \item Klijent dogovara sa menadzerom detalje o datumu događaja, njegovom trajanju, dodatnim zahtevima i upitima
+		    \item Menadžer je u zabeležio sve potrebne detalje o događaju u sistemu i rezervisao je odgovarajući datum
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Korak 5 : Sadržaj koji je korisnik odabrao nije dostupan. U tom slucaju menadžer zamoli korisnika da odabere nešto drugo iz ponude i uputi ga na ponudu koja je slična onoj koju je tražio
+            \item Korak 5 : Sadržaj koji je klijent odabrao nije dostupan. U tom slucaju menadžer zamoli klijenta da odabere nešto drugo iz ponude i uputi ga na ponudu koja je slična onoj koju je tražio. Nakon toga klijent ponovo bira sadržaj za svoj događaj
         \end{itemize}
 \end{itemize}
 
@@ -274,8 +274,8 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Korisnik je odabrao svoju ponudu
-		    \item Menadžer za prenosivi bar je prihvatio ponudu i zabeležio je	
+            \item Klijent je odabrao svoju ponudu
+		    \item Menadžer za prenosivi bar je prihvatio ponudu i zabeležio je u sistemu
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
@@ -283,13 +283,16 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-           \item Menadžer iznosi ponudu osoblju
+           \item Menadžer šalje izabranu ponudu osoblju
 		   \item Osoblje preuzima detalje o ponudi
-	       \item Osoblje zaduženo za pripremu pića priprema odgovarajuću ponudu (donosi naručene flaše pića, čaše, slamčice, led i sve ostalo što je korisnik zahtevao)
-	       \item Osoblje  zaduženo za nabavljanje prenosivog šanka, poslužaonika na kojima će se pića služiti i propratnih rekvizita za dekoraciju(cveće, table sa natpisima, baloni, ramovi za slikanje...) nabavlja ono što je potrebno za tip događaja koji korisnik pravi
-	         \item Sav pripremljeni sadržaj se pakuje u prevozno sredstvo tako da bezbedno stigne na dogovorenu lokaciju
-	        \item Sve je spremno za dostavu
+	       \item Osoblje zaduženo za pripremu pića proverava u sistemu da li je svo piće koje je potrebno za događaj dostupno i ako jeste priprema odgovarajuću ponudu (donosi naručene flaše pića, čaše, slamčice, led i sve ostalo što je korisnik zahtevao)
+	       \item Osoblje  zaduženo za nabavljanje prenosivog šanka, poslužaonika na kojima će se pića služiti i propratnih rekvizita za dekoraciju(cveće, table sa natpisima, baloni, ramovi za slikanje...) proverava u sistemu da li je sve potrebno za događaj dostupno i ako jeste priprema ono što je potrebno za tip događaja koji klijent pravi
+	        \item Osoblje pakuje sav pripremljeni sadržaj u prevozno sredstvo tako da bezbedno stigne na dogovorenu lokaciju
         \end{enumerate}
+    \item Alternativni tok:
+        \begin{itemize}
+            \item Koraci 3 i 4: Nešto od potrebnog sadržaja nije dostupno. U tom slučaju osoblje se obraća menadžeru kako bi nabavio ono što je klijent zahtevao
+        \end{itemize}
 \end{itemize}
 
 \subsubsection{Dostava ponude}
@@ -301,14 +304,13 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Vozač
+            \item Dostavljač
             \item Osoblje
-            \item Barmen
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
             \item Sva potrebna roba je spakovana u prevozno sredstvo
-		    \item Vozač je na raspolaganju	
+		    \item Dostavljač je na raspolaganju	
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
@@ -316,17 +318,13 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-           \item Vozač dovozi robu i osoblje na dogovorenu adresu sat vremena pre početka događaja 
+            \item Dostavljač dobije informaciju iz sistema gde treba odvesti porudžbinu i osoblje zaduženo za postavljanje
+           \item Dostavljač odvozi robu i osoblje na dogovorenu adresu sat vremena pre početka događaja 
 		    \item Osoblje montira prenosivi šank  
-		    \item Osoblje ređa caše, flaše, poslužaonike na šank i dekoriše ga onako kako je dogovoreno sa korisnikom
-		    \item Barmen dolazi na odgovarajuću adresu
-	        \item Sve je spremno za početak događaja
-
+		    \item Osoblje ređa caše, flaše, poslužaonike na šank i dekoriše ga onako kako je u sistemu zabeleženo
+		    
         \end{enumerate}
-    \item Alternativni tok:
-        \begin{itemize}
-            \item Korak 3 i 4: Korisnik se opredelio za opciju bez barmena koja podrazumeva da su pića vec sipana u caše i da će se gosti sami služiti. U tom slučaju potrebno je da osoblje pre početka dogadaja sipa pića u caše i poređa ih na poslužaonike.
-        \end{itemize}
+    
 \end{itemize}
 
 \subsubsection{Posluživanje gostiju}
@@ -338,13 +336,15 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
+            \item Menadžer za prenosivi bar
             \item Gosti
             \item Barmen
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Barmen je došao na adresu
-		    \item Barmenu su dostupne čaše i odgovarajuća pića i dodaci za određene koktele	
+            \item Menadžeru su dostupne informacije o događaju
+            \item Barmenu su dostupne čaše, odgovarajuća 
+		    pića i dodaci za određene koktele.
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
@@ -352,52 +352,22 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
+            \item Menadžer preko sistema šalje barmenu informacije o adresi, trajanju i tipu događaja
+            \item Barmen dobija navedene informacije
+            \item Barmen dolazi na odgovarajuću adresu i priprema se za posao
+            \item Barmen iz sistema čita spisak pića koje je klijent naručio
+            \item Barmen priprema navedena pića
            \item Gost dolazi do šanka
-		   \item Gost naručuje jedno ili više pića
-		   \item Barmen pravi pića i daje ih gostu
-		   \item Gost preuzima pica
+		   \item Gost preuzima piće koje je želeo od barmena
+		   \item Barmen uslužuje sledećeg gosta
 		  \end{enumerate}
 		\textit{Koraci se ponavljaju za svakog gosta koji priđe šanku sve do kraja događaja}
 	
     \item Alternativni tok:
         \begin{itemize}
-            \item Korak 1-4 : Barmen je trenutno zauzet pripremanjem pića za nekog drugog gosta. U tom slucaju potrebno je malo sačekati da se barmen oslobodi i onda zahtevati piće od njega.
-	      \item	Korak 3 : Piće koje korisnik traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i korisnik bira jedno od njih.
+	      \item	Korak 4 : Piće koje gost traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i gost bira jedno od njih.
 
         \end{itemize}
-\end{itemize}
-
-\subsubsection{Naplaćivanje usluga}
-
-\begin{itemize}
-    \item Kratak opis:
-        \begin{itemize}
-            \item Po završetku događaja osoblje naplaćuje uslugu, posprema bar, pakuje svoje stvari i odlazi sa mesta događaja
-        \end{itemize}
-    \item Učesnici:
-        \begin{itemize}
-            \item Osoblje
-            \item Korisnik
-        \end{itemize}
-    \item Preduslov:
-        \begin{itemize}
-            \item Događaj je završen
-        \end{itemize}
-    \item Postuslov:
-        \begin{itemize}
-            \item Usluga je plaćena
-		    \item Bar je pospremljen i spakovan
-		    \item Osoblje je otišlo sa mesta događaja
-        \end{itemize}
-    \item Glavni tok:
-        \begin{enumerate}
-          \item Osoblje čisti i rasprema šank
-		  \item Osoblje pakuje čaše, flaše i prateće rekvizite koje su koristili na dogadaju
-		  \item Osoblje ispostavlja korisniku račun usluge
-		  \item Korisnik isplaćuje uslugu
-		  \item Osoblje odlazi sa mesta događaja
-		  \end{enumerate}
-    
 \end{itemize}
 
 \subsection{Rad sa zaposlenima u firmi}
@@ -442,9 +412,9 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
-            \item Neuspešna validacija - Ukoliko zaposleni nije uneo ispravne podatke, sistem obaveštava korisnika o tome i proces se nastavlja u koraku 2.
-            \item Link za registraciju nije stigao - Ukoliko u koraku 5 zaposlenom nije stigao mejl za potvrdu, on obaveštava sistem kako bi mu poslao novi link za potvrdu. Proces se nastavlja u koraku 4.
-            \item Link za registraciju je istekao - Ukoliko u koraku 5, zaposleni ne potvrdi registraciju u određenom periodu, sistem briše nalog i proces se završava.
+            \item Korak 3 - Ukoliko zaposleni nije uneo ispravne podatke, sistem obaveštava korisnika o tome i proces se nastavlja u koraku 2.
+            \item Korak 5 - Ukoliko zaposlenom nije stigao mejl za potvrdu, on obaveštava sistem kako bi mu poslao novi link za potvrdu. Proces se nastavlja u koraku 4.
+            \item Korak 5 - Ukoliko zaposleni ne potvrdi registraciju u određenom periodu, sistem briše nalog i proces se završava.
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -470,12 +440,14 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \begin{itemize}
         \item Zaposleni
         \item CEO menadžer
+        \item Administrator
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
             \item Korisnici nisu zadovoljni uslugom koju je zaposleni pružio
             \item Poslodavac nije zadovoljan radom zaposlenog
             \item Zaposleni nije zadovoljan uslovima rada
+            \item Sistem je u funkciji
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
@@ -485,11 +457,15 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \begin{enumerate}
             \item CEO menadžer pokreće postupak prekida radnog odnosa sa zaposlenim
             \item Zaposleni dobija otkaz
-            \item Korisnički nalog je obrisan
+            \item Administrator pokreće postupak brisanja naloga zaposlenog klikom na dugme za brisanje
+            \item Administrator popunjava informacije o tome da li je zaposleni svojevoljno dao otkaz ili ne
+            \item Administrator potvrđuje brisanje
+            \item Sistem potvrđuje nalog kao obrisan
+            \item Sistem obaveštava administratora da je nalog obrisan
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
-            \item Prilikom koraka 2, zaposleni svojevoljno daje otkaz
+            \item Korak 2 - zaposleni svojevoljno daje otkaz
         \end{itemize}
 \end{itemize}
 
