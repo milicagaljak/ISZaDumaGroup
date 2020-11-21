@@ -384,16 +384,16 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Zaposleni u firmi se registruje na sistem Douma Group firme popunjavanjem osnovnih podataka. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
+        \item Administrator registruje zaposlenog u sistem Douma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
-        \item Neregistrovani zaposleni
+        \item Administrator
+        \item Zaposleni
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Osoba koja pokušava da se registruje je zaposlena u firmi
-            \item Zaposleni ima pristup internetu, računaru ili pametnom telefonu
+            \item Osoba koju administrator pokušava da registruje je prošla konkurs za zapošljavanje u firmi
             \item Sistem je u funkciji
         \end{itemize}
     \item Postuslovi:
@@ -402,23 +402,18 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Zaposleni pristupa stranici za registraciju
-            \item Zaposleni popunjava formular o sopstvenim podacima 
-            \item Sistem vrši validaciju podataka 
-            \item Sistem zaposlenom šalje mejl sa privremenim linkom za potvrdu
-            \item Zaposleni potvrđuje link za potvrdu i čeka potvrdu o registracija
-            \item Sistem potvrđuje nalog kao aktivan
-            \item Sistem obaveštava korisnika da je uspešno registrovan 
+            \item Administrator prima zahtev za registrovanje novog zaposlenog
+            \item Administrator proverava da li je zahtev validan
+            \item Administrator popunjava formular sa podacima koje je dobio
+            \item Administrator bira poziciju zaposlenog
+            \item Sistem šalje obaveštenje administratoru da potvrdi unos
+            \item Administrator potvrđuje podatke klikom na dugme
+            \item Sistem obaveštava administratora da je uspešno registrovan nalog
+            \item Administrator obaveštava zaposlenog da mu je kreiran nalog i daje mu uputstvo za korišćenje sistema
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
-            \item Korak 3 - Ukoliko zaposleni nije uneo ispravne podatke, sistem obaveštava korisnika o tome i proces se nastavlja u koraku 2.
-            \item Korak 5 - Ukoliko zaposlenom nije stigao mejl za potvrdu, on obaveštava sistem kako bi mu poslao novi link za potvrdu. Proces se nastavlja u koraku 4.
-            \item Korak 5 - Ukoliko zaposleni ne potvrdi registraciju u određenom periodu, sistem briše nalog i proces se završava.
-        \end{itemize}
-    \item Dodatne informacije:
-        \begin{itemize}
-            \item Neophodni podaci za prijavu su ime, prezime, e-mail adresa, pozicija zaposlenog u firmi, lozinka i potvrđena lozinka.
+            \item Korak 2 - Ukoliko je zahtev nepravilno popunjen, administrator obaveštava potencijalnog novog zaposlenog gde je napravljena grešska.
         \end{itemize}
 \end{itemize}
 
@@ -465,7 +460,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
-            \item Korak 2 - zaposleni svojevoljno daje otkaz
+            \item Korak 2 - Zaposleni svojevoljno daje otkaz
         \end{itemize}
 \end{itemize}
 
