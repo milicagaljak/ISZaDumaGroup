@@ -260,6 +260,15 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
 \end{itemize}
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Dijagram aktivnost Prenosivi bar 1.jpg}
+    \caption{Dijagram aktivnosti - Odabir ponude}
+    \label{fig:PrenosiviBar}
+\end{figure}
+
+
 \subsubsection{Priprema ponude}
 
 \begin{itemize}
@@ -295,6 +304,14 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Dijagram aktivnosti_Prenosivi_bar}
+    \caption{Dijagram aktivnosti - Priprema ponude}
+    \label{fig:PrenosiviBar}
+\end{figure}
+
+
 \subsubsection{Dostava ponude}
 
 \begin{itemize}
@@ -327,6 +344,13 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Dijagram aktivnosti 3 Prenosivi bar.jpg}
+    \caption{Dijagram aktivnosti - Dostava ponude}
+    \label{fig:PrenosiviBar}
+\end{figure}
+
 \subsubsection{Posluživanje gostiju}
 
 \begin{itemize}
@@ -355,22 +379,27 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
             \item Menadžer preko sistema šalje barmenu informacije o adresi, trajanju i tipu događaja
             \item Barmen dobija navedene informacije
             \item Barmen dolazi na odgovarajuću adresu i priprema se za posao
-            \item Barmen iz sistema čita spisak pića koje je klijent naručio
-            \item Barmen priprema navedena pića
-           \item Gost dolazi do šanka
-		   \item Gost preuzima piće koje je želeo od barmena
+            \item Barmen iz sistema čita spisak pića koje je klijent naručio i priprema ih
+           \item Gost dolazi do šanka i preuzima piće koje je želeo od barmena
 		   \item Barmen uslužuje sledećeg gosta
 		  \end{enumerate}
-		\textit{Koraci se ponavljaju za svakog gosta koji priđe šanku sve do kraja događaja}
+		\textit{Koraci 5 i 6 se ponavljaju za svakog gosta koji priđe šanku sve do kraja događaja}
 	
     \item Alternativni tok:
         \begin{itemize}
-	      \item	Korak 4 : Piće koje gost traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i gost bira jedno od njih.
+	      \item	Korak 5 : Piće koje gost traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i gost bira jedno od njih.
 
         \end{itemize}
 \end{itemize}
 
-\subsection{Rad sa zaposlenima u firmi}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Dijagram aktivnost 4 Prenosivi bar}
+    \caption{Dijagram aktivnosti - Posluživanje gostiju}
+    \label{fig:PrenosiviBar}
+\end{figure}
+
+\subsection{Rad sa zaposlenima}
 
 \subsubsection{Registracija zaposlenih}
 
@@ -393,12 +422,12 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Osoba koju administrator pokušava da registruje je prošla konkurs za zapošljavanje u firmi
+            \item Zaposleni nema kreiran nalog 
             \item Sistem je u funkciji
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Zaposleni je registrovan u sistem i dobija informaciju o tome
+            \item Zaposleni je registrovan u sistem i dobija informacije kako da ga koristi.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
