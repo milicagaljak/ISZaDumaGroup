@@ -117,7 +117,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=8cm]{Slucaj upotrebe _Registrovanje.jpg}
+    \includegraphics[width=8cm]{Miloš/Miloš_Slučajevi_upotrebe_slike/Slucaj upotrebe _Registrovanje.jpg}
     \caption{Dijagram slučaja upotrebe Registracija korisnika}
     \label{fig:Registracija}
 \end{figure}
@@ -141,13 +141,12 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
-            \item Osoba je registrovana i otvoren joj je nalog za korišćenje sistema
+            \item Korisnik je registrovan i otvoren mu je nalog za korišćenje sistema
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
             \item  Korisnik otvara stranicu za registraciju odabirom određenog dugmeta na sajtu sistema
-            \item Korisnik čita uslove korišćenja sistema 
-            \item Korisnik prihvata postavljene uslove
+            \item Korisnik čita uslove korišćenja sistema i prihvata ih ili ih odbija 
             \item Korisnik popunjava formular unoseći tražene lične podatke. Kada zavši popunjavanje formulara pritiska dugme za registraciju
             \item Sistem obrađuje podatke i vrši validaciju
             \item Sistem kreira privremeni korisnički nalog
@@ -158,10 +157,10 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Prilikom 2. koraka glavnog toka korisnik odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja i onemogućava dalji tok registracije dok korisnik ne prihvati date uslove.
-            \item Prilikom koraka 5. ukoliko korisnik nije uneo ispravne podatke, sistem obaveštava korisnika i proces se nastavlja od koraka 4.
-            \item Ukoliko korisnik nije prihvatio aktivacionu poruku u koraku 8. u određenom vremenskom periodu, sistem briše nalog i proces se završava.
-            \item Ukoliko u koraku 8. korisnik nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku
+            \item Prilikom 2. koraka glavnog toka korisnik odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja, vraća ga na korak 2. glavnog toka i onemogućava dalji tok registracije dok korisnik ne prihvati date uslove.
+            \item Prilikom koraka 4. ukoliko korisnik nije uneo ispravne podatke, sistem obaveštava korisnika i proces se nastavlja od koraka 3.
+            \item Ukoliko korisnik nije prihvatio aktivacionu poruku u koraku 7. u određenom vremenskom periodu, sistem briše nalog i proces se završava.
+            \item Ukoliko u koraku 7. korisnik nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku i proces se nastavlja od koraka 6. glavnog toka
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -169,12 +168,19 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
 \end{itemize}
 
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{Miloš/Miloš_Dijagrami_aktivnosti_slike/Dijagram_aktivnosti_Registrovanje.jpg}
+    \caption{Dijagram aktivnosti - Registrovanje korisnika}
+    \label{fig:Registracija aktivnost}
+\end{figure}
+
 
 \subsubsection{Prijavljivanje korisnika}
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=8cm]{Slucaj upotrebe _Prijavljivanje.jpg}
+    \includegraphics[width=8cm]{Miloš/Miloš_Slučajevi_upotrebe_slike/Slucaj upotrebe _Prijavljivanje.jpg}
     \caption{Dijagram slučaja upotrebe Prijavljivanje korisnika}
     \label{fig:Prijavljivanje}
 \end{figure}
@@ -182,33 +188,47 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item --
+            \item Prethodno registrovani korisnik se prijavljuje na sistem
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item --
+            \item Registrovani korisnik koji želi da se prijavi na sistem
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item --
+            \item Korisnik mora biti registrovan u sistemu da bi se uspešno prijavio
+            \item Korisnik mora da zna korisničko ime i šifru koju je naveo u formularu pri registraciji
+            \item Korisnik poseduje računar ili pametni telefon i pristup Internetu
+            \item Sistem je u funkciji
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
-            \item --
+            \item Korisnik je priavljen i može da koristi funkcionalnosti koje sistem pruža
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item  --
+            \item Korisnik unosi svoje korisničko ime i šifru koju je koristio pri registraciji
+            \item Sistem proverava postojanje i tačnost podataka koje je korisnik uneo i ako su podaci ispravni prosleđuje korisnika ka osnovnom interfejsu aplikacije
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item --
+            \item Ukoliko u koraku 1. korisnik ne može da se seti podataka za prijavljivanje, šalje mejl centru za pomoć. Korisnik ostaje u koraku 1. sve dok ne unese tačne podatke, kada ih unese prelazi u korak 2.
+            \item Ukoliko u koraku 2. korisnički podaci nisu ispravni, sistem obaveštava korisnika o grešci i prelazi se ponovo u korak 1.
+            \item Ukoliko korisnik u koraku 2. više puta ne uspe da se prijavi tada sistem postavlja zabranu prijavljivanja za tog korisnika na dva minuta. Nakon isteka zabrane, korisnik nastavlja od koraka 1.
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
-            \item --
+            \item Zabrana prijavljivanja nakon nekoliko neuspešnih pokušaja postoji radi zaštite podataka i informacija sistema od eventualnih napada.
         \end{itemize}
 \end{itemize}
+
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{Miloš/Miloš_Dijagrami_aktivnosti_slike/Dijagram_aktivnosti_Prijavljivanje.jpg}
+    \caption{Dijagram aktivnosti - Prijavljivanje korisnika}
+    \label{fig:Prijavljivanje aktivnost}
+\end{figure}
 
 %Ovo je moj deo - Veronika
 
