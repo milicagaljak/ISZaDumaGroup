@@ -237,7 +237,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Dijagram slucaja upotrebe _ Prenosivi bar.jpg}
+    \includegraphics[width=8cm]{Slucaj upotrebe _ Prenosivi bar.jpg}
     \caption{Dijagram slučaja upotrebe Prenosivi bar}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -428,7 +428,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \label{fig:RegistracijaZ}
 \end{figure}
 
-\subsubsection{Registracija zaposlenih}
+\subsubsection{Registracija zaposlenog}
 
 \begin{itemize}
     \item Kratak opis: 
@@ -458,13 +458,21 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
             \item Sistem šalje obaveštenje administratoru da potvrdi unos
             \item Administrator potvrđuje podatke klikom na dugme
             \item Sistem obaveštava administratora da je uspešno registrovan nalog
-            \item Administrator obaveštava zaposlenog da mu je kreiran nalog i daje mu uputstvo za korišćenje sistema
+            \item Administrator šalje zaposlenom uputstvo za korišćenje sistema
+            \item Zaposleni dobija uputstvo i može da koristi sistem
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
-            \item Korak 2 - Ukoliko je zahtev nepravilno popunjen, administrator obaveštava potencijalnog novog zaposlenog gde je napravljena grešska.
+            \item Korak 2 - Ukoliko je zahtev nepravilno popunjen, administrator obaveštava potencijalnog novog zaposlenog gde je napravljena greška. Zaposleni ispravlja grešku i proces se nastavlja u koraku 1.
         \end{itemize}
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Nina/Activity Diagram Registracija.jpg}
+    \caption{Dijagram aktivnosti registracije zaposlenog}
+    \label{fig:RegistracijaZ}
+\end{figure}
 
 \subsubsection{Otpuštanje zaposlenog}
 
@@ -495,9 +503,16 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
-            \item Korak 2 - Zaposleni svojevoljno daje otkaz
+            \item Korak 2 - Zaposleni svojevoljno daje otkaz. Proces se završava.
         \end{itemize}
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Nina/Activity Diagram Otkaz.jpg}
+    \caption{Dijagram aktivnosti otpuštanja zaposlenog}
+    \label{fig:RegistracijaZ}
+\end{figure}
 
 \subsubsection{Brisanje naloga zaposlenog}
 
@@ -530,7 +545,12 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{enumerate}
 \end{itemize}
 
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Nina/Activity Diagram Brisanje.jpg}
+    \caption{Dijagram aktivnosti brisanja naloga}
+    \label{fig:RegistracijaZ}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ovo je moj deo - Andjela
@@ -943,7 +963,7 @@ Klijent preuzima ketering.
     \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Usluga koju je klijent izabrao je gotova.
+            \item Usluga koju je klijent izabrao je završena.
             \item CEO menadžer ima uvid u broj računa firme.
             \item Klijent ima otvoren nalog za korišćenje aplikacije.
         \end{itemize}
@@ -954,12 +974,18 @@ Klijent preuzima ketering.
     \item Glavni tok:
         \begin{enumerate}
             \item Klijent se prijavljuje na aplikaciju.
-            \item Klijent utvrđuje svotu novca koju treba da uplati klikom na detalje usluge koju je izabrao.
             \item Klijent uplaćuje definisanu svotu novca preko aplikacije. 
             \item Banka prosleđuje uplaćeni novac na račun firme.
             \item CEO menadžer dobija obaveštenje o uplati novca.
         \end{enumerate}
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Nina/Activity Diagram Naplata.jpg}
+    \caption{Dijagram aktivnosti naplate usluge}
+    \label{fig:RegistracijaZ}
+\end{figure}
 
 \end{document}
 
