@@ -421,14 +421,14 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \subsection{Rad sa zaposlenima}
 
-\subsubsection{Registracija zaposlenih}
-
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Registracija_zaposlenog.jpg}
-    \caption{Dijagram slučaja upotrebe Registracija zaposlenog}
+    \includegraphics[width=8cm]{Nina/RadSaZaposlenima.jpg}
+    \caption{Dijagram slučaja upotrebe Rad sa zaposlenima}
     \label{fig:RegistracijaZ}
 \end{figure}
+
+\subsubsection{Registracija zaposlenih}
 
 \begin{itemize}
     \item Kratak opis: 
@@ -468,13 +468,6 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \subsubsection{Otpuštanje zaposlenog}
 
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=8cm]{Prekid_radnog_odnosa.jpg}
-    \caption{Dijagram slučaja upotrebe Prekid radnog odnosa}
-    \label{fig:Prekid}
-\end{figure}
-
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
@@ -484,34 +477,59 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \begin{itemize}
         \item Zaposleni
         \item CEO menadžer
-        \item Administrator
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
             \item Korisnici nisu zadovoljni uslugom koju je zaposleni pružio
             \item Poslodavac nije zadovoljan radom zaposlenog
             \item Zaposleni nije zadovoljan uslovima rada
-            \item Sistem je u funkciji
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Zaposleni dobija otkaz i obrisan mu je nalog
+            \item Zaposleni je otpušten.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
             \item CEO menadžer pokreće postupak prekida radnog odnosa sa zaposlenim
-            \item Zaposleni dobija otkaz
-            \item Administrator pokreće postupak brisanja naloga zaposlenog klikom na dugme za brisanje
-            \item Administrator popunjava informacije o tome da li je zaposleni svojevoljno dao otkaz ili ne
-            \item Administrator potvrđuje brisanje
-            \item Sistem potvrđuje nalog kao obrisan
-            \item Sistem obaveštava administratora da je nalog obrisan
+            \item Zaposleni dobija otkaz.
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
             \item Korak 2 - Zaposleni svojevoljno daje otkaz
         \end{itemize}
 \end{itemize}
+
+\subsubsection{Brisanje naloga zaposlenog}
+
+\begin{itemize}
+    \item Kratak opis: 
+    \begin{itemize}
+        \item Briše se nalog zaposlenog sa kojim je prekinut radni odnos.
+    \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+        \item CEO menadžer
+        \item Administrator
+    \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Zaposleni je otpušten.
+            \item Sistem je u funkciji.
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Nalog je obrisan.
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item CEO menadžer šalje zahtev administratoru da obriše nalog.
+            \item Administrator pokreće postupak brisanja naloga zaposlenog klikom na dugme za brisanje.
+            \item Administrator popunjava informacije o tome da li je zaposleni svojevoljno dao otkaz ili ne.
+            \item Administrator potvrđuje brisanje.
+            \item Sistem potvrđuje nalog kao obrisan.
+        \end{enumerate}
+\end{itemize}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -902,6 +920,46 @@ Klijent preuzima ketering.
 
 %kraj-Milica
 %%%%%%%%%%%%%%%%
+
+\subsection{Naplata usluge}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Nina/Naplata.jpg}
+    \caption{Dijagram slučaja upotrebe Naplata usluge}
+    \label{fig:RegistracijaZ}
+\end{figure}
+
+\begin{itemize}
+    \item Kratak opis: 
+    \begin{itemize}
+        \item Po završetku usluge korisnik uplaćuje prethodno definisanu svotu novca.
+    \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+        \item Klijent
+        \item Banka
+        \item CEO menadžer
+    \end{itemize}
+    \item Preduslov:
+        \begin{itemize}
+            \item Usluga koju je klijent izabrao je gotova.
+            \item CEO menadžer ima uvid u broj računa firme.
+            \item Klijent ima otvoren nalog za korišćenje aplikacije.
+        \end{itemize}
+    \item Postuslov:
+        \begin{itemize}
+            \item Transakcija je uspešno obavljena.
+            \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Klijent se prijavljuje na aplikaciju.
+            \item Klijent utvrđuje svotu novca koju treba da uplati klikom na detalje usluge koju je izabrao.
+            \item Klijent uplaćuje definisanu svotu novca preko aplikacije. 
+            \item Banka prosleđuje uplaćeni novac na račun firme.
+            \item CEO menadžer dobija obaveštenje o uplati novca.
+        \end{enumerate}
+\end{itemize}
 
 \end{document}
 
