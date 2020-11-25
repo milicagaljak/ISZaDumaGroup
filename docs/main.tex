@@ -122,45 +122,44 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \label{fig:Registracija}
 \end{figure}
 
-\subsubsection{Registrovanje korisnika}
+\subsubsection{Registrovanje klijenta}
 
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Korisnik se registruje kako bi mogao da koristi mogućnosti informacionog sistema Duma Group
+            \item Klijent se registruje kako bi mogao da koristi mogućnosti informacionog sistema Duma Group
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Korisnik koji želi da koristi usluge Duma Group sistema
+            \item Klijent koji želi da koristi usluge Duma Group sistema
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Korisnik mora da priloži tačne podatke pri registraciji
-            \item Korisnik poseduje računar ili pametni telefon i pristup Internetu
+            \item Klijent poseduje računar ili pametni telefon i pristup Internetu
             \item Sistem je u funkciji
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
-            \item Korisnik je registrovan i otvoren mu je nalog za korišćenje sistema
+            \item Klijent je registrovan i otvoren mu je nalog za korišćenje sistema
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item  Korisnik otvara stranicu za registraciju odabirom određenog dugmeta na sajtu sistema
-            \item Korisnik čita uslove korišćenja sistema i prihvata ih ili ih odbija 
-            \item Korisnik popunjava formular unoseći tražene lične podatke. Kada zavši popunjavanje formulara pritiska dugme za registraciju
+            \item  Klijent otvara stranicu za registraciju odabirom određenog dugmeta na sajtu sistema
+            \item Klijent čita uslove korišćenja sistema i prihvata ih
+            \item Klijent popunjava formular unoseći tražene lične podatke. Kada zavši popunjavanje formulara pritiska dugme za registraciju
             \item Sistem obrađuje podatke i vrši validaciju
             \item Sistem kreira privremeni korisnički nalog
-            \item Sistem šalje korisniku poruku na e-mail adresu unetu u formularu i čeka na potvrdu određeni period
-            \item Korisnik proverava poštu i potvrđuje link za registraciju
+            \item Sistem šalje klijentu poruku na e-mail adresu unetu u formularu i čeka na potvrdu određeni period
+            \item Klijent proverava poštu i potvrđuje link za registraciju
             \item Sistem obeležava korisnički nalog kao aktivan
-            \item Sistem obaveštava korisnika slanjem poruke na e-mail adresu korisnika da je nalog uspešno kreiran 
+            \item Sistem obaveštava klijenta slanjem poruke na e-mail adresu klijenta da je nalog uspešno kreiran 
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Prilikom 2. koraka glavnog toka korisnik odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja, vraća ga na korak 2. glavnog toka i onemogućava dalji tok registracije dok korisnik ne prihvati date uslove.
-            \item Prilikom koraka 4. ukoliko korisnik nije uneo ispravne podatke, sistem obaveštava korisnika i proces se nastavlja od koraka 3.
-            \item Ukoliko korisnik nije prihvatio aktivacionu poruku u koraku 7. u određenom vremenskom periodu, sistem briše nalog i proces se završava.
-            \item Ukoliko u koraku 7. korisnik nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku i proces se nastavlja od koraka 6. glavnog toka
+            \item Prilikom 2. koraka glavnog toka klijent odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja, vraća ga na korak 2. glavnog toka i onemogućava dalji tok registracije dok klijent ne prihvati date uslove.
+            \item Prilikom koraka 4. ukoliko klijent nije uneo ispravne podatke, sistem obaveštava klijenta i proces se nastavlja od koraka 3.
+            \item Ukoliko klijent nije prihvatio aktivacionu poruku u koraku 7. u određenom vremenskom periodu, sistem briše nalog i proces se završava.
+            \item Ukoliko u koraku 7. klijent nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku i proces se nastavlja od koraka 6. glavnog toka
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -197,7 +196,6 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \item Preduslov:
         \begin{itemize}
             \item Korisnik mora biti registrovan u sistemu da bi se uspešno prijavio
-            \item Korisnik mora da zna korisničko ime i šifru koju je naveo u formularu pri registraciji
             \item Korisnik poseduje računar ili pametni telefon i pristup Internetu
             \item Sistem je u funkciji
         \end{itemize}
@@ -207,6 +205,9 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
+            %Možda da dodate početni korak da se otvara odgovarajuća stranica za
+            %prijavu na sistem. Drugi korak može da se podeli na dva koraka. Sistem
+            %proverava podatke i sistem prosleđuje korisnika dalje.
             \item Korisnik unosi svoje korisničko ime i šifru koju je koristio pri registraciji
             \item Sistem proverava postojanje i tačnost podataka koje je korisnik uneo i ako su podaci ispravni prosleđuje korisnika ka osnovnom interfejsu aplikacije
         \end{enumerate}
@@ -433,7 +434,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Administrator registruje zaposlenog u sistem Douma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
+        \item Administrator registruje zaposlenog koji nema otvoren nalog u sistem Douma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
@@ -442,8 +443,8 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Zaposleni nema kreiran nalog 
-            \item Sistem je u funkciji
+            \item Zaposleni nema kreiran nalog.
+            \item Sistem je u funkciji.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
@@ -451,25 +452,25 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Administrator prima zahtev za registrovanje novog zaposlenog
-            \item Administrator proverava da li je zahtev validan
-            \item Administrator popunjava formular sa podacima koje je dobio
-            \item Administrator bira poziciju zaposlenog
-            \item Sistem šalje obaveštenje administratoru da potvrdi unos
-            \item Administrator potvrđuje podatke klikom na dugme
-            \item Sistem obaveštava administratora da je uspešno registrovan nalog
-            \item Administrator šalje zaposlenom uputstvo za korišćenje sistema
-            \item Zaposleni dobija uputstvo i može da koristi sistem
+            \item Zaposleni popunjava obrazac sa potrebnim podacima za registraciju.
+            \item Zaposleni predaje obrazac administratoru.
+            \item Administrator proverava da li su podaci validni.
+            \item Administrator popunjava formular sa podacima koje je dobio.
+            \item Administrator bira poziciju zaposlenog.
+            \item Sistem šalje obaveštenje administratoru da potvrdi unos.
+            \item Administrator potvrđuje podatke klikom na dugme.
+            \item Sistem obaveštava administratora da je uspešno registrovan nalog.
+            \item Administrator šalje zaposlenom uputstvo za korišćenje sistema.
         \end{enumerate}
     \item Alternativni tokovi:
         \begin{itemize}
-            \item Korak 2 - Ukoliko je zahtev nepravilno popunjen, administrator obaveštava potencijalnog novog zaposlenog gde je napravljena greška. Zaposleni ispravlja grešku i proces se nastavlja u koraku 1.
+            \item Korak 3 - Ukoliko je obrazac nepravilno popunjen (nedostaju neki podaci), administrator obaveštava zaposlenog gde je napravljena greška kako bi je ispravio. Proces se nastavlja u koraku 1.
         \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Nina/Activity Diagram Registracija.jpg}
+    \includegraphics[width=10cm]{Nina/DijagramAktivnostiRegistracijaZaposlenog.jpg}
     \caption{Dijagram aktivnosti registracije zaposlenog}
     \label{fig:RegistracijaZ}
 \end{figure}
