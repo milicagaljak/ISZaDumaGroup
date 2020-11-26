@@ -163,7 +163,8 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
-            \item Potrebni podaci za registraciju su korisničko ime, lozinka, potvrda lozinke, ime, prezime, e-mail naloga, e-mail za povratak naloga ako se desi da je korisnik zaboravi lozinku ili korisničko ime, datum rodjenja korisnika, pol korisnika
+            \item Potrebni podaci za registraciju su korisničko ime, lozinka, potvrda lozinke, broj kreditne kartice, ime, prezime, e-mail naloga, e-mail za povratak naloga ako se desi da je korisnik zaboravi lozinku ili korisničko ime, datum rodjenja korisnika, pol korisnika
+            \item Ova registracija predstavlja registraciju klijenata sistema, postoji i registracija zaposlenih koja se vrši odvojeno
         \end{itemize}
 \end{itemize}
 
@@ -223,6 +224,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \item Dodatne informacije:
         \begin{itemize}
             \item Zabrana prijavljivanja nakon nekoliko neuspešnih pokušaja postoji radi zaštite podataka i informacija sistema od eventualnih napada.
+            \item Prijavljivanje se vrši na isti način i za klijente i za zaposlene u Duma Group preduzeću
         \end{itemize}
 \end{itemize}
 
@@ -266,21 +268,21 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \item Postuslov:
         \begin{itemize}
             \item Klijent je odabrao odgovarajuću ponudu
-            \item Menadžer je prihvatio odabir i zabeležio potrebne detalje
+            \item Menadžer je prihvatio odabir i zabeležio potrebne detalje u sistem
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
 		    \item Klijent se opredeljuje za uslugu ''Prenosivi bar''
-		    \item Klijent stupa u kontakt sa menadžerom za ovu uslugu
+		    \item Klijent preko sistema stupa u kontakt sa menadžerom za ovu uslugu
 		    \item Klijent objašnjava menadžeru kog je tipa događaj i za šta mu je potreban bar
-		    \item Menadžer mu na mejl šalje ponudu iz ''Prenosivog bara'' sa pratećim informacijama o ceni, slikama i snimcima
-		    \item Klijent bira sadržaj koji želi iz ponude
+		    \item Menadžer mu preko sistema šalje ponudu iz ''Prenosivog bara'' sa pratećim informacijama o ceni, slikama i snimcima
+		    \item Klijent bira sadržaj koji želi iz ponude i to se belezi u sistem
 		    \item Klijent dogovara sa menadzerom detalje o datumu događaja, njegovom trajanju, dodatnim zahtevima i upitima
-		    \item Menadžer je u zabeležio sve potrebne detalje o događaju u sistemu i rezervisao je odgovarajući datum
+		    \item Menadžer beleži sve dogovorene detalje u sistemu i rezerviše odgovarajući datum
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Korak 5 : Sadržaj koji je klijent odabrao nije dostupan. U tom slucaju menadžer zamoli klijenta da odabere nešto drugo iz ponude i uputi ga na ponudu koja je slična onoj koju je tražio. Nakon toga klijent ponovo bira sadržaj za svoj događaj
+            \item Korak 5 - Sadržaj koji je klijent odabrao nije dostupan. U tom slucaju menadžer zamoli klijenta da odabere nešto drugo iz ponude i uputi ga na ponudu koja je slična onoj koju je tražio. Nakon toga klijent ponovo bira sadržaj za svoj događaj.
         \end{itemize}
 \end{itemize}
 
@@ -316,7 +318,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-           \item Menadžer šalje izabranu ponudu osoblju
+           \item Menadžer preko sistema šalje izabranu ponudu osoblju
 		   \item Osoblje preuzima detalje o ponudi
 	       \item Osoblje zaduženo za pripremu pića proverava u sistemu da li je svo piće koje je potrebno za događaj dostupno i ako jeste priprema odgovarajuću ponudu (donosi naručene flaše pića, čaše, slamčice, led i sve ostalo što je korisnik zahtevao)
 	       \item Osoblje  zaduženo za nabavljanje prenosivog šanka, poslužaonika na kojima će se pića služiti i propratnih rekvizita za dekoraciju(cveće, table sa natpisima, baloni, ramovi za slikanje...) proverava u sistemu da li je sve potrebno za događaj dostupno i ako jeste priprema ono što je potrebno za tip događaja koji klijent pravi
