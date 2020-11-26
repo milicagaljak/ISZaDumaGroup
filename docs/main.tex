@@ -149,17 +149,17 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
             \item Klijent popunjava formular unoseći tražene lične podatke. Kada zavši popunjavanje formulara pritiska dugme za registraciju
             \item Sistem obrađuje podatke i vrši validaciju
             \item Sistem kreira privremeni korisnički nalog
-            \item Sistem šalje klijentu poruku na e-mail adresu unetu u formularu i čeka na potvrdu određeni period
+            \item Sistem šalje klijentu poruku na e-mail adresu unetu u formularu, postavlja predviđeno vreme za aktivaciju naloga i čeka
             \item Klijent proverava poštu i potvrđuje link za registraciju
-            \item Sistem obeležava korisnički nalog kao aktivan
+            \item Sistem obeležava korisnički nalog kao aktivan i čuva podatke o nalogu
             \item Sistem obaveštava klijenta slanjem poruke na e-mail adresu klijenta da je nalog uspešno kreiran 
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Prilikom 2. koraka glavnog toka klijent odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja, vraća ga na korak 2. glavnog toka i onemogućava dalji tok registracije dok klijent ne prihvati date uslove.
-            \item Prilikom koraka 4. ukoliko klijent nije uneo ispravne podatke, sistem obaveštava klijenta i proces se nastavlja od koraka 3.
-            \item Ukoliko klijent nije prihvatio aktivacionu poruku u koraku 7. u određenom vremenskom periodu, sistem briše nalog i proces se završava.
-            \item Ukoliko u koraku 7. klijent nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku i proces se nastavlja od koraka 6. glavnog toka
+            \item Prilikom 2. koraka glavnog toka klijent odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja, vraća ga na 2. korak glavnog toka i onemogućava dalji tok registracije dok klijent ne prihvati date uslove.
+            \item Prilikom 4. koraka glavnog toka ukoliko klijent nije uneo ispravne podatke, sistem obaveštava klijenta i proces se nastavlja od 3. koraka glavnog toka
+            \item Ukoliko klijent nije prihvatio aktivacionu poruku u 7. koraku glavnog toka u određenom vremenskom periodu, sistem briše nalog i proces se završava.
+            \item Ukoliko u 7. koraku glavnog toka klijent nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku i proces se nastavlja od koraka 6. glavnog toka
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -208,14 +208,17 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
             %Možda da dodate početni korak da se otvara odgovarajuća stranica za
             %prijavu na sistem. Drugi korak može da se podeli na dva koraka. Sistem
             %proverava podatke i sistem prosleđuje korisnika dalje.
+            \item Korisnik otvara stranicu za prijavljivanje
             \item Korisnik unosi svoje korisničko ime i šifru koju je koristio pri registraciji
-            \item Sistem proverava postojanje i tačnost podataka koje je korisnik uneo i ako su podaci ispravni prosleđuje korisnika ka osnovnom interfejsu aplikacije
+            \item Sistem validira podatke
+            \item Sistem sprovodi korisnika ka interfejsu aplikacije
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Ukoliko u koraku 1. korisnik ne može da se seti podataka za prijavljivanje, šalje mejl centru za pomoć. Korisnik ostaje u koraku 1. sve dok ne unese tačne podatke, kada ih unese prelazi u korak 2.
-            \item Ukoliko u koraku 2. korisnički podaci nisu ispravni, sistem obaveštava korisnika o grešci i prelazi se ponovo u korak 1.
-            \item Ukoliko korisnik u koraku 2. više puta ne uspe da se prijavi tada sistem postavlja zabranu prijavljivanja za tog korisnika na dva minuta. Nakon isteka zabrane, korisnik nastavlja od koraka 1.
+            \item Ukoliko u 1. koraku glavnog toka korisnik ne može da se seti podataka za prijavljivanje obaveštava sistem da mu pošalje mail za oporavak. Sistem šalje mail korisniku, korisnik proverava mail i menja podatke u skladu sa instrukcijama koje je dobio u mailu. Sistem čuva izmene koje je korisnik napravio a proces se nastavlja od 1. koraka glavnog toka.
+            \item Ukoliko u 3. koraku glavnog toka korisnički podaci nisu ispravni, sistem obaveštava korisnika o grešci i postavlja brojač neuspešnih pokušaja.
+            Ako je brojač prethodno postavljen, njegova vrednost se uvećava za jedan. Proces se nastavlja od 2. koraka glavnog toka.
+            \item Ukoliko sistem u 3. koraku glavnog toka određen broj puta ne uspe da validira korisničke podatke postavlja zabranu prijavljivanja za tog korisnika na određeni vremski period. Nakon isteka zabrane izvršavanje se nastavlja od 2. koraka glavnog toka.
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -424,7 +427,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Nina/RadSaZaposlenima.jpg}
+    \includegraphics[width=8cm]{Nina/Slucaj upotrebe rad sa zaposlenima.jpg}
     \caption{Dijagram slučaja upotrebe Rad sa zaposlenima}
     \label{fig:RegistracijaZ}
 \end{figure}
@@ -935,8 +938,8 @@ Klijent preuzima ketering.
             \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Klijent se prijavljuje na aplikaciju.
-            \item Klijent uplaćuje definisanu svotu novca preko aplikacije. 
+            \item Klijent se prijavljuje na sajt firme Duma Group.
+            \item Klijent uplaćuje definisanu svotu novca preko sajta. 
             \item Banka prosleđuje uplaćeni novac na račun firme.
             \item CEO menadžer dobija obaveštenje o uplati novca.
         \end{enumerate}
