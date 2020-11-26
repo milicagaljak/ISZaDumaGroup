@@ -243,7 +243,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Slucaj upotrebe _ Prenosivi bar.jpg}
+    \includegraphics[width=8cm]{Veronika/Dijagram slucaja upotrebe _ Prenosivi bar.jpg}
     \caption{Dijagram slučaja upotrebe Prenosivi bar}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -273,12 +273,13 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \item Glavni tok:
         \begin{enumerate}
 		    \item Klijent se opredeljuje za uslugu ''Prenosivi bar''
-		    \item Klijent preko sistema stupa u kontakt sa menadžerom za ovu uslugu
+		   nakon čega sistem preusmerava klijenta na mejl menadžera za ovu uslugu
 		    \item Klijent objašnjava menadžeru kog je tipa događaj i za šta mu je potreban bar
 		    \item Menadžer mu preko sistema šalje ponudu iz ''Prenosivog bara'' sa pratećim informacijama o ceni, slikama i snimcima
 		    \item Klijent bira sadržaj koji želi iz ponude i to se belezi u sistem
 		    \item Klijent dogovara sa menadzerom detalje o datumu događaja, njegovom trajanju, dodatnim zahtevima i upitima
-		    \item Menadžer beleži sve dogovorene detalje u sistemu i rezerviše odgovarajući datum
+		    \item Menadžer beleži sve dogovorene detalje u sistemu i rezerviše odgovarajući datum u sistemu
+		    \item Menadžer u sistemu formira račun za klijenta na koji se dodaju cene prenosivog bara i dekoracije. Cene pića dodaju se naknadno jer klijent plaća samo ono što je na događaju popijeno.
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
@@ -289,7 +290,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Dijagram aktivnost Prenosivi bar 1.jpg}
+    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 1 PB.jpg}
     \caption{Dijagram aktivnosti - Odabir ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -320,19 +321,18 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \begin{enumerate}
            \item Menadžer preko sistema šalje izabranu ponudu osoblju
 		   \item Osoblje preuzima detalje o ponudi
-	       \item Osoblje zaduženo za pripremu pića proverava u sistemu da li je svo piće koje je potrebno za događaj dostupno i ako jeste priprema odgovarajuću ponudu (donosi naručene flaše pića, čaše, slamčice, led i sve ostalo što je korisnik zahtevao)
-	       \item Osoblje  zaduženo za nabavljanje prenosivog šanka, poslužaonika na kojima će se pića služiti i propratnih rekvizita za dekoraciju(cveće, table sa natpisima, baloni, ramovi za slikanje...) proverava u sistemu da li je sve potrebno za događaj dostupno i ako jeste priprema ono što je potrebno za tip događaja koji klijent pravi
+	       \item Osoblje proverava u sistemu da li je sve potrebno za događaj dostupno i ako jeste priprema ono što je potrebno
 	        \item Osoblje pakuje sav pripremljeni sadržaj u prevozno sredstvo tako da bezbedno stigne na dogovorenu lokaciju
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Koraci 3 i 4: Nešto od potrebnog sadržaja nije dostupno. U tom slučaju osoblje se obraća menadžeru kako bi nabavio ono što je klijent zahtevao
+            \item Koraci 3 - Nešto od potrebnog sadržaja nije dostupno. U tom slučaju osoblje se obraća menadžeru kako bi nabavio ono što je klijent zahtevao.
         \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Dijagram aktivnosti_Prenosivi_bar}
+    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 2 PB.jpg}
     \caption{Dijagram aktivnosti - Priprema ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -357,22 +357,20 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
-            \item Sve je postavljeno po dogovoru i događaj može da počne
+            \item Sve je postavljeno po dogovoru i spremno za početak događaja
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Dostavljač dobije informaciju iz sistema gde treba odvesti porudžbinu i osoblje zaduženo za postavljanje
+            \item Dostavljač preuzima informaciju iz sistema gde treba odvesti porudžbinu i osoblje zaduženo za postavljanje
            \item Dostavljač odvozi robu i osoblje na dogovorenu adresu sat vremena pre početka događaja 
-		    \item Osoblje montira prenosivi šank  
-		    \item Osoblje ređa caše, flaše, poslužaonike na šank i dekoriše ga onako kako je u sistemu zabeleženo
-		    
+		    \item Osoblje montira prenosivi bar i dekoriše ga onako kako je u sistemu zabeleženo da je korisnik zahtevao
         \end{enumerate}
     
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Dijagram aktivnosti 3 Prenosivi bar.jpg}
+    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 3 PB.jpg}
     \caption{Dijagram aktivnosti - Dostava ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -386,15 +384,13 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
-            \item Menadžer za prenosivi bar
             \item Gosti
             \item Barmen
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Menadžeru su dostupne informacije o događaju
-            \item Barmenu su dostupne čaše, odgovarajuća 
-		    pića i dodaci za određene koktele.
+            \item Barmen je dobio detalje o mestu i vremenu održavanja događaja
+            \item Dostavljač je dovezao na događaj sve ono što je barmenu potrebno za pripremanje pića
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
@@ -402,25 +398,24 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Menadžer preko sistema šalje barmenu informacije o adresi, trajanju i tipu događaja
-            \item Barmen dobija navedene informacije
-            \item Barmen dolazi na odgovarajuću adresu i priprema se za posao
-            \item Barmen iz sistema čita spisak pića koje je klijent naručio i priprema ih
-           \item Gost dolazi do šanka i preuzima piće koje je želeo od barmena
-		   \item Barmen uslužuje sledećeg gosta
+            \item Barmen dolazi na odgovarajuću adresu koja mu je poslata preko sistema i priprema se za posao
+            \item Barmen iz sistema čita spisak pića koje je klijent naručio i proverava da li mu je dostavljeno sve što je naručeno
+           \item Gost dolazi do šanka i naručuje piće od barmena
+		   \item Barmen uslužuje gosta i beleži u sistem koje je piće naručeno
+		   \item Sistem dodaje cenu tog pića na račun korisnika
 		  \end{enumerate}
-		\textit{Koraci 5 i 6 se ponavljaju za svakog gosta koji priđe šanku sve do kraja događaja}
+		\textit{Koraci 3,4,5 se ponavljaju za svakog gosta koji priđe šanku sve do kraja događaja}
 	
     \item Alternativni tok:
         \begin{itemize}
-	      \item	Korak 5 : Piće koje gost traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i gost bira jedno od njih.
+	      \item	Korak 5 - Piće koje gost traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i gost bira jedno od njih.
 
         \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Dijagram aktivnost 4 Prenosivi bar}
+    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 4 PB.jpg}
     \caption{Dijagram aktivnosti - Posluživanje gostiju}
     \label{fig:PrenosiviBar}
 \end{figure}
