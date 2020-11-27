@@ -530,40 +530,35 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Korisnik bira ponudu fotografskih studija na osnovu njihovih foto izloga
+        \item Klijent bira odgovarajuću ponudu u skladu sa događajem za koji mu je usluga potrebna
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
-        \item Korisnik
-        \item Predstavnik foto studija
+        \item Klijent
         \item Menadžer za fotografiju
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Korisnik se registrovao na sajt
-            \item Na raspolaganju je spisak ponuda različitih foto studija
+            \item Klijent se registrovao na sajt
+            \item Na raspolaganju je spisak ponuda različitih sa pratećim slikama i snimcima
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Korisnik je odabrao odgovarajuću ponudu
-            \item Menadžer je obavešten o izboru foto studija
+            \item Klijent je odabrao odgovarajuću ponudu
+            \item Menadžer je prihvatio izbor i zabeležio potrebne detalje u sistem
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Korisnik se registruje na sajt
-            \item Opredeljuje se za uslugu ''Fotografija''
-            \item Bira ponudu nekog od predloženih foto studija
-            \item Stupa u kontakt sa menadžerom za ovu uslugu
-            \item Korisnik obaveštava menadžera kog je tipa događaj i za koji foto studio se odlučio na osnovu pregledanih ponuda 
-            \item Korisnik i menadžer se dogovaraju oko detalja i dodatnih zahteva vezanih za događaj
+            \item Klijent se ulogovao na sajt
+            \item Klijent se opredeljuje za uslugu ''Fotografija'', nakon čega sistem preusmerava klijenta na mejl menadžera za ovu uslugu
+            \item Klijent objašnjava menadžeru kog je tipa događaj i kakve fotografe želi
+            \item Menadžer mu preko sistema šalje ponudu iz ''Fotografije'' sa pratećim informacijama o ceni i finalnom proizvodu 
+            \item Klijent bira sadržaj iz ponude i to se beleži u sistem 
+            \item Klijent se dogovara sa menadžerom oko detalja dogadaja (datum događaja, trajanje, dodatni zahtevi)
+            \item Menadžer beleži sve dogovorene detalje u sistem i rezerviše odgovarajući datum u sistemu
+            \item Menadžer u sistemu formira račun za klijenta na koji se dodaje cena fotografisanja i izrada finalnog proizvoda(foto album, buk, video snimak...)
         \end{enumerate}
-    \item Alternativni tok:
-        \begin{enumerate}
-            \item Korisnik ima kontakt svog fotografa koji nije u saradnji sa firmom
-            \item Stupa u kontakt sa menadžerom za ovu uslugu
-            \item Obaveštava menadžera da ima svog fotografa, i daje menadžeru kontakt fotografa radi dalje organizacije
-            \item Menadžer je prihvatio da sarađuje sa predloženim fotografom
-        \end{enumerate}
+        
 \end{itemize}
 
 \subsubsection{Priprema}
@@ -907,7 +902,7 @@ Klijent preuzima ketering.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Nina/Naplata.jpg}
+    \includegraphics[width=6cm]{Nina/Slucaj_upotrebe_naplata.jpg}
     \caption{Dijagram slučaja upotrebe Naplata usluge}
     \label{fig:RegistracijaZ}
 \end{figure}
@@ -915,36 +910,44 @@ Klijent preuzima ketering.
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Po završetku usluge korisnik uplaćuje prethodno definisanu svotu novca.
+        \item Kada je usluga koju je klijent odabrao potpuno završena, on uplaćuje prethodno definisanu svotu novca preko sistema.
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
         \item Klijent
-        \item Banka
-        \item CEO menadžer
     \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Usluga koju je klijent izabrao je završena.
+            \item Usluga koju je klijent izabrao je potpuno završena.
             \item CEO menadžer ima uvid u broj računa firme.
-            \item Klijent ima otvoren nalog za korišćenje aplikacije.
+            \item Klijent ima otvoren nalog za korišćenje sistema.
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
-            \item Transakcija je uspešno obavljena.
+            \item Uplata je uspešno obavljena.
             \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Klijent se prijavljuje na sajt firme Duma Group.
-            \item Klijent uplaćuje definisanu svotu novca preko sajta. 
-            \item Banka prosleđuje uplaćeni novac na račun firme.
-            \item CEO menadžer dobija obaveštenje o uplati novca.
+            \item Klijent se prijavljuje na sistem firme Duma Group.
+            \item Klikom na sekciju 'račun' klijent ima uvid u ukupnu cenu usluge, koja je bila ažurirana tokom vršenja usluge.
+            \item Klijent klikom da dugme 'plaćanje' dobija formular koji popunjava podacima koji nedostaju kako bi izvršio uplatu.
+            \item Klijent potvrđuje uplatu.
+            \item Sistem vrši validaciju uplate.
+            \item Sistem beleži uslugu kao uspešno regulisanu i čisti se sekcija 'račun' za klijenta.
         \end{enumerate}
+    \item Alternativni tok:
+        \begin{itemize}
+            \item Korak 5 - Ukoliko uplata nije validna (broj računa je nepostojeći ili nije u dobrom formatu), sistem obaveštava korisnika o grešci i proces se nastavlja u koraku 4.  
+    \end{itemize}
+    \item Dodatne informacije:
+        \begin{itemize}
+            \item Podaci koje klijent treba da popuni su ime, prezime, adresa i broj žiro računa.
+        \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Nina/Activity Diagram Naplata.jpg}
+    \includegraphics[width=8cm]{Nina/DIjagram_aktivnosti_naplata.jpg}
     \caption{Dijagram aktivnosti naplate usluge}
     \label{fig:RegistracijaZ}
 \end{figure}
