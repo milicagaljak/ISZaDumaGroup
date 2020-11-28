@@ -693,17 +693,26 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \subsection{Ketering}
 
-\subsubsection{Prihvatanje porudzbine za dogadjaj}
+    
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8cm]{Milica/Ketering_Slucaj_upotrebe.jpg}
+    \caption{Dijagram slučaja upotrebe Naručivanje keteringa}
+    \label{fig:Ketering}
+\end{figure}
+
+\subsubsection{Prihvatanje porudžbine za događaj i formiranje tima za događaj}
 \begin{itemize}
     \item Kratak opis:
     \begin{itemize}
-        \item Menadzer obavestava osoblje kuhinje o samom dogadjaju. Osoblje odgovara o raspolozivosti za taj dogadjaj.
+        \item 
+        Menadžer prihvata narudžbinu putem aplikacije. U zavisnosti od datuma za koji je naručena narudžbina, šalje zahtev osoblju koje je raspoloživo tada. Osoblje obeležava u aplikaciji da li želi da radi za zakazani događaj ili ne.
     \end{itemize}
 \end{itemize}
   \begin{itemize}
-        \item Ucesnici:
+        \item Učesnici:
           \begin{itemize}
-        \item Menadzer
+        \item Menadžer
     \end{itemize}
       \begin{itemize}
         \item Osoblje
@@ -712,47 +721,46 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
       \begin{itemize}
         \item Preduslov:
           \begin{itemize}
-        \item Menadzer je obavesten od strane klijenta o vrsti dogadjaja i detaljima porudzbine.
+        \item  Klijent je izabrao željenu ponudu korišćenjem aplikacije.
     \end{itemize}
     
     \end{itemize}
       \begin{itemize}
         \item Postuslov:
           \begin{itemize}
-        \item Osoblje je informisano o predstvojecem dogadjaju.
+        \item Izabran je tim koji će raditi za zakazani događaj. Šef kuhinje zna koje osoblje je u timu.
     \end{itemize}
     \end{itemize}
       \begin{itemize}
         \item Glavni tok:
           \begin{enumerate}
-              \item Menadzer salje mejl osoblju o datumu dogadjaja, tipu dogadjaja, detalje o samoj narudzbini keteringa.
+              \item Menadžer šalje zahtev za potvrdu o radu raspoloživom osoblju. Sa zahtevom šalje i informacije o tipu događaja, detalje o samoj narudžbini keteringa.
         
-              \item Svako od osoblja dobija mejl i proverava da li je zaposlen toga dana za neki drugi dogadjaj.
+              \item Svako od osoblja koje je dobilo zahtev vraća odgovor da li želi da radi narudžbinu ili ne.
          
-              \item Svako od osoblja odgovara menadzeru da li je slobodan toga dana.
         
-              \item Menadzer ima spisak osoblja koje je slobodno za zakazani datum.
+              \item Menadžer ima spisak osoblja koje žele da rade događaj.
           
-              \item Menadzer salje spisak osoblja sefu kuhinje.
+              \item Menadžer šalje spisak osoblja šefu kuhinje.
           \end{enumerate}
     \end{itemize}
       \begin{itemize}
         \item Alternativni tok:
           \begin{itemize}
-        \item Korak 4.-Ukoliko nema dovoljno osoblja za zakazani dogadjaj, menadzer stupa u kontakt sa klijentom, obavestava ga o tome i izlaze mu druge opcije kao sto su promena termina dogadjaja, manja kolicina porucene hrane...Ukoliko klijent prihvati druge opcije, menadzer ponovo salje mejl u kome su opisane promene u vezi dogadjaja.
+        \item -Korak 4.-Ukoliko nema dovoljno osoblja za zakazani događaj, menadžer stupa u kontakt sa klijentom pomoću podataka koje je klijent osavio na svom nalogu na aplikaciji, obaveštava ga o tome i izlaže mu druge opcije kao što su promena termina događaja, manja količina poručene hrane...Ukoliko klijent prihvati druge opcije, menadžer ponovo sastavlja tim u skladu sa klijentovom željom da li želi drugi datum ili drugu porudžbinu. Proces se nastavlja u koraku 4.
     \end{itemize}
     \end{itemize}
-\subsubsection{Priprema hrane za dogadjaj}
+\subsubsection{Priprema hrane za događaj}
 \begin{itemize}
     \item Kratak opis:
     \begin{itemize}
-        \item Sef kuhinje zadaje zadatke za osoblje. Svako od osoblja procenjuje vreme koje mu je potrebno da zavrsi zadati deo posla i obavestava sefa kuhinje i tome. Priprema hrane.
+        \item Šef kuhinje zadaje zadatke za osoblje. Priprema hrane.
     \end{itemize}
 \end{itemize}
   \begin{itemize}
-        \item Ucesnici:
+        \item Učesnici:
           \begin{itemize}
-        \item Sef kuhinje
+        \item Šef kuhinje
     \end{itemize}
       \begin{itemize}
         \item Osoblje
@@ -761,30 +769,28 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
       \begin{itemize}
         \item Preduslov:
           \begin{itemize}
-        \item Sef kuhinje je obavesten o detaljima narudzbine.
+        \item Šef kuhinje je obavešten o detaljima narudžbine. Šef kuhinje ima spisak osoblja koji su raspoloživi za događaj.
    \end{itemize}
     
     \end{itemize}
       \begin{itemize}
         \item Postuslov:
           \begin{itemize}
-        \item Narudzbina je gotova za dogovoreno vreme.
+        \item Narudžbina je gotova za dogovoreno vreme.
     \end{itemize}
     \end{itemize}
       \begin{itemize}
         \item Glavni tok:
           \begin{enumerate}
-              \item Sef kuhinje ima spisak osoblja koji su raspolozivi za dogadjaj.
+              
         
-              \item U zavisnosti od vrste hrane koja je narucena i sposobnostima osoblja, podeljeni su zadaci osoblju od strane sefa kuhinje.
+              \item U zavisnosti od vrste hrane koja je naručena i sposobnostima osoblja, podeljeni su zadaci osoblju od strane šefa kuhinje. Svako od osoblja ima na aplikaciji koji je njegov deo posla, kao i koji su delovi posla ostalih članova u timu. 
         
-              \item Svako od osoblja procenjuje koliko vremena je potrebno da izvrsi zadati posao.
-          
-              \item Saopstava procenjeno vreme sefu kuhinje.
+              \item Svako od osoblja procenjuje koliko vremena je potrebno da izvrši zadati posao i  unosi procenjeno vreme u aplikaciju.
          
-              \item U zavisnosti od procenjenog vremena osoblja i zakazanog termina dogadjaja, sef kuhinje zakazuje pocetak radnog vremena.
+              \item U zavisnosti od procenjenog vremena osoblja i zakazanog termina dogadjaja, šef kuhinje zakazuje početak radnog vremena.
        
-              \item U dogovoreno vreme, svako od osoblja pocinje sa izvrsavanjem svog dela posla.
+              \item U dogovoreno vreme, svako od osoblja počinje sa izvršavanjem svog dela posla.
           
               \item Ketering je spreman za dostavljanje.
           \end{enumerate}
@@ -792,98 +798,67 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
       \begin{itemize}
         \item Alternativni tok:
           \begin{itemize}
-        \item Korak 5.- Ukoliko procenjeno vreme zavrsavanja posla prekoraci zakazano vreme dogadjaja, sef kuhinje preuzima deo posla koji ne bi bio gotov na vreme.
+        \item -Korak 3.- Ukoliko procenjeno vreme završavanja posla prekorači zakazano vreme događaja, šef kuhinje šalje zahtev osoblju koje je odbilo zahtev menadžera a bilo je raspoloživo za datum događaja. Proces se nastavlja u koraku 3.
     \end{itemize}
     \end{itemize}
     
-    
-\subsubsection{Informacije o dostavi}
-\begin{itemize}
-    \item Kratak opis:
-    \begin{itemize}
-        \item Menadzer obavestava dostavljaca o terminu i lokaciji isporuke porucenog keteringa. Dostavljac potvrdjuje dostavu.
-    \end{itemize}
-\end{itemize}
-  \begin{itemize}
-        \item Ucesnici:
-          \begin{itemize}
-        \item Menadzer
-    \end{itemize}
-      \begin{itemize}
-        \item Dostavljac
-    \end{itemize}
-    \end{itemize}
-      \begin{itemize}
-        \item Preduslov:
-          \begin{itemize}
-        \item Osoblje u kuhinji je zavrsilo posao na vreme.
-        
-   \end{itemize}
-    
-    \end{itemize}
-      \begin{itemize}
-        \item Postuslov:
-          \begin{itemize}
-        \item Dostavljac je obavesten o isporuci.
-    \end{itemize}
-    \end{itemize}
-      \begin{itemize}
-        \item Glavni tok:
-          \begin{enumerate}
-              \item Menadzer poziva dostavljaca i obavestava ga o detaljima isporuke.
-          
-              \item Dostavljac odgovara da li je slobodan da dostavi porudzbinu.
-          \end{enumerate}
-    \end{itemize}
-      \begin{itemize}
-        \item Alternativni tok:
-          \begin{itemize}
-        \item Korak 2.-Ukoliko dostavljac nije slobodan da dostavi narudzbinu, menadzer poziva nekog drugog dostavljaca.
-    \end{itemize}
-    \end{itemize}
-    
+
 \subsubsection{Dostava keteringa}
 \begin{itemize}
     \item Kratak opis:
     \begin{itemize}
-        \item Dostavljac prevozi u odredjeno vreme na odredjenu lokaciju poruceni ketering.
-Klijent preuzima ketering.
+ 
+        \item Menadžer korišćenjem informacionog sistema obaveštava dostavljača o terminu i lokaciji isporuke poručenog keteringa. Dostavljač potvrđuje dostavu.Dostavljač prevozi u određeno vreme na određenu lokaciju poručeni ketering.
+        Klijent preuzima ketering.
     \end{itemize}
+    
+    
 \end{itemize}
+
+
   \begin{itemize}
-        \item Ucesnici:
+        \item Učesnici:
+         \begin{itemize}
+        \item Menadžer:
+    \end{itemize}
           \begin{itemize}
-        \item Klijent
+        \item Klijent:
     \end{itemize}
       \begin{itemize}
-        \item Dostavljac
+        \item Dostavljač:
     \end{itemize}
     \end{itemize}
       \begin{itemize}
         \item Preduslov:
           \begin{itemize}
-        \item Dostavljac je obavesten kada treba da dostavi porudzbinu i zna gde treba da dostavi porudzbinu.
+        \item Osoblje u kuhinji je završilo posao na vreme.
+       
    \end{itemize}
     
     \end{itemize}
       \begin{itemize}
         \item Postuslov:
           \begin{itemize}
-        \item Porudzbina je dostavljena klijentu za dogadjaj.
+        \item Porudžbina je dostavljena klijentu za događaj.
     \end{itemize}
     \end{itemize}
       \begin{itemize}
         \item Glavni tok:
           \begin{enumerate}
-              \item Dostavljac se informise kako moze da dodje na lokaciju dogadjaja.
+          
+              \item Menadžer šalje zahtev dostavljaču preko aplikacije sa detaljima isporuke.
+          
+              \item Dostavljač potvrđuje da li je slobodan da dostavi porudžbinu ili ne.
+              
+              \item Dostavljač se informiše kako može da dođe na lokaciju događaja.Dostavljač uzima u obzir nepredviđene okolnosti na putu i obračunava vreme polaska shodno tome.
         
-              \item Procenjuje koliko mu je vremena potrebno da dostavi porudzbinu.
+              \item Procenjuje koliko mu je vremena potrebno da dostavi porudžbinu.
          
-              \item U zavisnosti od procenjenog vremena odredjuje vreme polaska.
+              \item U zavisnosti od procenjenog vremena određuje vreme polaska.
       
-              \item Prevozi porucen ketering.
+              \item Prevozi poručen ketering.
          
-              \item Stize u dogovoreno vreme.
+              \item Stiže u dogovoreno vreme.
          
               \item Klijent preuzima isporuku.
           \end{enumerate}
@@ -891,16 +866,10 @@ Klijent preuzima ketering.
       \begin{itemize}
         \item Alternativni tok:
           \begin{itemize}
-        \item Korak 2.-Dostavljac uzima u obzir nepredvidjene okolnosti na putu i obracunava vreme polaska shodno tome.
+        \item -Korak 2.-Ukoliko dostavljač da negativan odgovor, menadžer šalje zahtev drugom dostavljaču. Proces se nastavlja u koraku 2.
     \end{itemize}
     \end{itemize}
-    
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=8cm]{Ketering.jpg}
-    \caption{Dijagram slučaja upotrebe Narucivanje keteringa}
-    \label{fig:Ketering}
-\end{figure}
+
 
 %kraj-Milica
 %%%%%%%%%%%%%%%%
