@@ -110,8 +110,8 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \item Šef kuhinje je osoba koja je zadužena da upravlja organizacijom posla u kuhinji. Nadređeni je osoblju u kuhinji i zadužen je za podelu posla u kuhinji. Informacije o samom događaju prima od menadžera.
         \item Predstavnik foto studija
         \item Fotografi
-        \item Barmen
-        \item Gosti
+        \item Barmen je osoba koja je zadužena za posluživanje pića gostima i beleženje toga šta je popijeno, u sklopu usluge Prenosivi bar
+        \item Gosti su oni koji bivaju usluženi na događaju.
         \item Dostavljač je osoba koja je zadužena da isporuči poručenu opciju od strane klijenta. Detalje o samoj isporuci dobija putem aplikacije.
     \end{enumerate}
     
@@ -250,7 +250,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Veronika/Dijagram slucaja upotrebe _ Prenosivi bar.jpg}
+    \includegraphics[width=8cm]{Veronika/Dijagram slucaja upotrebe PB.jpg}
     \caption{Dijagram slučaja upotrebe Prenosivi bar}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -269,7 +269,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Klijent se registrovao na sajt
+            \item Klijent se prijavio u sistem
 		    \item Na raspolaganju je spisak ponuda sa pratećim informacijama, slikama i snimcima
         \end{itemize}
     \item Postuslov:
@@ -279,11 +279,10 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-		    \item Klijent se opredeljuje za uslugu ''Prenosivi bar''
-		   nakon čega sistem preusmerava klijenta na mejl menadžera za ovu uslugu
+		    \item Klijent se klikom na dugme opredeljuje za uslugu ''Prenosivi bar'' nakon čega sistem preusmerava klijenta na mejl menadžera za ovu uslugu
 		    \item Klijent objašnjava menadžeru kog je tipa događaj i za šta mu je potreban bar
-		    \item Menadžer mu preko sistema šalje ponudu iz ''Prenosivog bara'' sa pratećim informacijama o ceni, slikama i snimcima
-		    \item Klijent bira sadržaj koji želi iz ponude i to se belezi u sistem
+		    \item Menadžer mu na mejl šalje ponudu iz  sistema koja najviše odgovara tom tipu događaja, koja se sastoji od slika, snimaka i cene za konkretne sadržaje
+		    \item Klijent bira sadržaj koji želi iz ponude i svaki odabir se beleži u sistem
 		    \item Klijent dogovara sa menadzerom detalje o datumu događaja, njegovom trajanju, dodatnim zahtevima i upitima
 		    \item Menadžer beleži sve dogovorene detalje u sistemu i rezerviše odgovarajući datum u sistemu
 		    \item Menadžer u sistemu formira račun za klijenta na koji se dodaju cene prenosivog bara i dekoracije. Cene pića dodaju se naknadno jer klijent plaća samo ono što je na događaju popijeno.
@@ -318,7 +317,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \item Preduslov:
         \begin{itemize}
             \item Klijent je odabrao svoju ponudu
-		    \item Menadžer za prenosivi bar je prihvatio ponudu i zabeležio je u sistemu
+		    \item Menadžer za prenosivi bar je zabeležio ponudu u sistemu
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
@@ -326,14 +325,14 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-           \item Menadžer preko sistema šalje izabranu ponudu osoblju
-		   \item Osoblje preuzima detalje o ponudi
-	       \item Osoblje proverava u sistemu da li je sve potrebno za događaj dostupno i ako jeste priprema ono što je potrebno
-	        \item Osoblje pakuje sav pripremljeni sadržaj u prevozno sredstvo tako da bezbedno stigne na dogovorenu lokaciju
+           \item Menadžer preko sistema šalje izabranu ponudu osoblju tako što odabere u sistemu sve one koji trebaju biti angažovani na događaju i na njihove naloge pošalje koja su im zaduženja
+		   \item Osoblje preko svojih naloga preuzima detalje o ponudi
+	       \item Osoblje proverava u sistemu da li je sve potrebno za događaj dostupno u magacinu i ako jeste priprema ono što je potrebno
+	        \item Osoblje pakuje sav pripremljeni sadržaj u prevozno sredstvo tako da bezbedno stigne na dogovorenu lokaciju 
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Koraci 3 - Nešto od potrebnog sadržaja nije dostupno. U tom slučaju osoblje se obraća menadžeru kako bi nabavio ono što je klijent zahtevao.
+            \item Koraci 3 - Nešto od potrebnog sadržaja nije dostupno u magacinu. U tom slučaju zadatak menadžera je da zaduži nekog od osoblja da nabavi to što je neophodno.
         \end{itemize}
 \end{itemize}
 
@@ -402,6 +401,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \item Postuslov:
         \begin{itemize}
             \item Svi gosti su usluženi na odgovarajući način
+            \item Na račun su dodate cene popijenih pića
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
