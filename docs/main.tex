@@ -104,17 +104,15 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     
     \begin{enumerate}
         \item Klijent su svi oni kojima je potrebna usluga koju pruža firma Duma Group. Po završetku usluge vrše uplatu definisanih sredstava preko žiro računa.
-        \item Menadžer za ketering
-        \item Menadžer za fotografiju
-        \item Menadžer za prenosivi bar 
+        \item Menadžer je osoba koja je zadužena za komunikaciju između klijenta i zaposlenih. Prihvata ponudu i pristupa informacijama za kontaktiranje zaposlenih i klijenata putem informacionog sistema.
         \item Administrator je osoba koja je zadužena da obavi registraciju zaposlenog koji nema kreiran nalog u sistemu, kao i da obriše nalog nakon prekida radnog odnosa sa zaposlenim.
-        \item Osoblje 
-        \item Šef kuhinje
+        \item Osoblje su svi oni koji su zaposleni za određeni događaj. Zadatke dobijaju od zaposlenih kao što je menadžer, šef kuhinje...
+        \item Šef kuhinje je osoba koja je zadužena da upravlja organizacijom posla u kuhinji. Nadređeni je osoblju u kuhinji i zadužen je za podelu posla u kuhinji. Informacije o samom događaju prima od menadžera.
         \item Predstavnik foto studija
         \item Fotografi
         \item Barmen
         \item Gosti
-        \item Dostavljač
+        \item Dostavljač je osoba koja je zadužena da isporuči poručenu opciju od strane klijenta. Detalje o samoj isporuci dobija putem aplikacije.
     \end{enumerate}
     
     
@@ -704,15 +702,82 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \subsection{Ketering}
 
-    
-\begin{figure}[htp]
-    \centering
-    \includegraphics[width=8cm]{Milica/Ketering_Slucaj_upotrebe.jpg}
-    \caption{Dijagram slučaja upotrebe Naručivanje keteringa}
-    \label{fig:Ketering}
+  
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm, height=6cm]{Milica/Ketering_Slucaj_upotrebe1.jpg}
+\caption{Dijagram slučaja upotrebe Ketering}
+\label{fig:Ketering}
 \end{figure}
 
-\subsubsection{Prihvatanje porudžbine za događaj i formiranje tima za događaj}
+\subsubsection{Noručivanje keteringa i prihvatanje ponude}
+\begin{itemize}
+    \item Kratak opis:
+    \begin{itemize}
+ 
+        \item Klijent putem aplikacije bira željenu ponudu. Menadžer putem aplikacije dobija traženu ponudu, odnosno prihvata je.
+    \end{itemize}
+    
+    
+\end{itemize}
+
+
+  \begin{itemize}
+        \item Učesnici:
+         \begin{itemize}
+        \item Menadžer
+    \end{itemize}
+          \begin{itemize}
+        \item Klijent
+    \end{itemize}
+    
+    \end{itemize}
+      \begin{itemize}
+        \item Preduslov:
+          \begin{itemize}
+        \item Klijent je registrovan u sistemu.
+       
+   \end{itemize}
+    
+    \end{itemize}
+      \begin{itemize}
+        \item Postuslov:
+          \begin{itemize}
+        \item Porudžbina je naručena i prihvaćena od strane menadžera.
+    \end{itemize}
+    \end{itemize}
+      \begin{itemize}
+        \item Glavni tok:
+          \begin{enumerate}
+          
+              \item Klijent, se uloguje na svoj nalog u aplikaciji, bira kao željenu opciju ketering.
+              
+              \item Zatim bira datum i vreme početka događaja za koji naručuje ketering i mesto.
+          
+              \item Nakon toga, bira iz asortimana na aplikaciji željenu ponudu i količinu.
+              
+              \item Potvrđuje izabranu porudžbinu.
+        
+              \item Menadžeru stiže obaveštenje od aplikacije da ima novu porudžbinu keteringa.
+         
+              \item Prihvata porudžbinu.
+      
+          \end{enumerate}
+    \end{itemize}
+    
+   
+    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=15cm, height=5cm]{Milica/Dijagram_aktivnosti_Narucivanje.jpg}
+    \caption{Dijagram aktivnosti Naručivanje keteringa i prihvatanje ponude}
+    \label{fig:RegistracijaZ}
+\end{figure}
+
+    
+
+
+\subsubsection{Formiranje tima za događaj}
 \begin{itemize}
     \item Kratak opis:
     \begin{itemize}
@@ -765,11 +830,12 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \end{itemize}
     \end{itemize}
     
+    
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Milica/Diajgram_Aktivnosti_Sastav_tima.jpg}
-    \caption{Dijagram aktivnosti Prihvatanje ponude i formiranje tima }
-    \label{fig:RegistracijaZ}
+    \includegraphics[width=13cm, height=8cm]{Milica/Dijagram_aktivnosti_Formiranje_tima.jpg}
+    \caption{Dijagram aktivnosti Formiranje tima za događaj }
+    \label{fig:FormiranjeTima}
 \end{figure}
 
 \subsubsection{Priprema hrane za događaj}
@@ -826,7 +892,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Milica/Dijagarm_aktivnosti_Priprema_hrane.jpg}
+    \includegraphics[width=14cm, height=8cm]{Milica/Dijagarm_aktivnosti_Priprema_hrane.jpg}
     \caption{Dijagram aktivnosti Priprema hrane }
     \label{fig:RegistracijaZ}
 \end{figure}
@@ -901,7 +967,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Milica/Dijagram_aktivnosti_Dostava_ketering.jpg}
+    \includegraphics[width=15cm, height=8cm]{Milica/Dijagram_aktivnosti_Dostava_ketering.jpg}
     \caption{Dijagram aktivnosti Dostava keteringa}
     \label{fig:RegistracijaZ}
 \end{figure}
