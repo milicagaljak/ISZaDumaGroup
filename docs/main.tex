@@ -94,11 +94,11 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \subsection{Učesnici u sistemu}
     
     \begin{enumerate}
-        \item Klijent
-        \item CEO menadžer
+        \item Klijent su svi oni kojima je potrebna usluga koju pruža firma Duma Group. Po završetku usluge vrše uplatu definisanih sredstava preko žiro računa.
         \item Menadžer za ketering
         \item Menadžer za fotografiju
         \item Menadžer za prenosivi bar
+        \item Administrator je osoba koja je zadužena da obavi registraciju zaposlenog koji nema kreiran nalog u sistemu, kao i da obriše nalog nakon prekida radnog odnosa sa zaposlenim.
         \item Osoblje
         \item Šef kuhinje
         \item Predstavnik foto studija
@@ -485,7 +485,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
-        \item CEO menadžer
+        \item Menadžer za ketering/fotografiju/prenosivi bar
         \item Administrator
     \end{itemize}
     \item Preduslovi:
@@ -499,7 +499,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item CEO menadžer šalje zahtev administratoru da obriše nalog.
+            \item Menadžer šalje zahtev administratoru da obriše nalog.
             \item Administrator pokreće postupak brisanja naloga zaposlenog klikom na dugme za brisanje.
             \item Administrator popunjava informacije o tome da li je zaposleni svojevoljno dao otkaz ili ne.
             \item Administrator potvrđuje brisanje.
@@ -521,7 +521,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=8cm]{fotografija_dijagram1.png}
+    \includegraphics[width=8cm]{Andjela/fotografija_dijagram1.png}
     \caption{Dijagram slučaja upotrebe Fotografija}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -561,7 +561,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
         
     \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{odabir_ponude_fotografija.png}
+    \includegraphics[width=8cm]{Andjela/odabir_ponude_fotografija.png}
     \caption{Dijagram aktivnosti odabira ponude}
     \label{fig:RegistracijaZ}
 \end{figure}
@@ -572,39 +572,47 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Menadžer obaveštava fotografa o rasporedu svečanosti
-        \item Korisnik obaveštava o dodatnim zahtevima
+        \item Menadžer za Fotografiju obaveštava fotografe o rasporedu svečanosti
+        %\item Klijent obaveštava o dodatnim zahtevima
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
-        \item Korisnik
-        \item Predstavnik foto studija
-        \item Menadžer za fotografiju
+        %\item Klijent
+        \item Fotografi
+        \item Menadžer za Fotografiju
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Korisnik je izabrao foto studio i opredelio se za jednu ponudu
-            \item Menadžer je prihvatio ponudu
+            \item Klijent je izabrao ponudu
+            \item Menadžer za Fotografiju je prihvatio ponudu i zabeležio u sistem
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Tim fotografa iz foto studija su pripremili opremu u odnosu na zahtev
+            \item Fotografi su pripremili opremu u odnosu na zahtev
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Korisnik obaveštava menadžera o svojim zahtevima 
-            \item Menadžer obaveštava fotografe o rasporedu svečanosti
-            \item Tim fotografa iz foto studija priprema opremu (rasvetu, kameru, dron...)
-            \item Tim priprema plan fotografisanja u skladu sa zahtevima korisnika
-            \item Na dan proslave, tim setuje opremu
+            \item Menadžer preko sistema obaveštava fotografe o rasporedu svečanosti i zahtevima klijenta
+            \item Fotografi preuzimaju detalje o zahtevima klijenta
+            \item Fotografi pripremaju opremu (rasvetu, kameru, dron...)
+            \item Fotografi pripremaju plan fotografisanja u skladu sa zahtevima korisnika
+            \item Na dan proslave, fotografi setuju opremu
         \end{enumerate}
+        
+        \begin{figure}[H]
+    \centering
+\includegraphics[width=8cm]{Andjela/priprema_fotografija.png}
+    \caption{Dijagram aktivnosti pripreme}
+    \label{fig:RegistracijaZ}
+\end{figure}
+        
+        
 \end{itemize}
 \subsubsection{Fotografisanje}
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Fotografi snimaju, sarađuju i menjaju pozicije kako bi zabeležili najvažnije trenutke
-        \item Beleži se više materijala nego što je potrebno za finalni proizvod
+        \item Fotografi snimaju, fotografišu i menjaju pozicije kako bi zabeležili najvažnije trenutke
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
@@ -613,6 +621,7 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
+            \item Fotografi su dobili detalje o mestu i vremenu održavanja događaja
             \item Oprema je setovana
             \item Fotografi su na pozicijama i čekaju da svečanost počne
         \end{itemize}
@@ -622,16 +631,25 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
             \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
+            \item Fotografi dolaze na odgovarajuću adresu koja im je poslata preko sistema
             \item Snimanje i fotografisanje slavlja sa gostima
             \item Fotografisanje slavljenika
+            
+            \textit{Koraci 2 i 3 se ponavljaju za svakog gosta ili slavljenika koji želi da se fotogafiše tokom celog događaja}
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Ukoliko je u pitanju svadba (Post Wedding)
-        \end{itemize}
-        \begin{enumerate}
-            \item Dan nakog proslave mladenci i fotografi idu na dogovorenu destinaciju radi fotografisanja
-        \end{enumerate}
+            \item Korak 3 - Ukoliko je u pitanju svadba (Post Wedding), dan nakog proslave mladenci i fotografi idu na dogovorenu destinaciju radi fotografisanja
+    \end{itemize}
+    
+    \begin{figure}[H]
+    \centering
+\includegraphics[width=8cm]{Andjela/fotografisanje.png}
+    \caption{Dijagram aktivnosti fotografisanja}
+    \label{fig:RegistracijaZ}
+\end{figure}
+    
+        
 \end{itemize}
 \subsubsection{Postprodukcija}
 \begin{itemize}
@@ -641,11 +659,11 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
-        \item Tim fotografa iz foto studija
+        \item Fotografi
     \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Sakupljen je ceo master (sirovi materijal) spreman za obradu
+            \item Sakupljen je sav sirovi materijal spreman za obradu
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
@@ -656,33 +674,17 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
             \item Pregled sirovog materijala
             \item Izrada finalnog proizvoda od sakupljenih fotografija. Finalni proizvod može biti fotoalbum, fotografije u elektronskoj formi, buk
             \item Izrada finalnog proizvoda od sakupljenih video snimaka. Izbor najuspešnijih kadrova. Finalni proizvod može biti spot(od 30s do 180s), film (kraća i duža verzija)
+            \textit{Koraci 2 i 3 se ponavljaju sve dok ne bude zavrsena obrada sirovog materijala i spreman finalni proizvod}
         \end{enumerate}
-\end{itemize}
-\subsubsection{Naplacivanje}
-\begin{itemize}
-    \item Kratak opis: 
-    \begin{itemize}
-        \item Po završetku postprodukcije, predstavnik foto studija se nalazi sa korisnikom radi primopredaje finalnog materijala i naplaćivanja usluge
-    \end{itemize}
-    \item Učesnici:
-        \begin{itemize}
-        \item Korisnik
-        \item Fotograf
-    \end{itemize}
-    \item Preduslov:
-        \begin{itemize}
-            \item Finalni proizvod je gotov i spreman za isporuku
-        \end{itemize}
-    \item Postuslov:
-        \begin{itemize}
-            \item Usluga je plaćena
-            \end{itemize}
-    \item Glavni tok:
-        \begin{enumerate}
-            \item Fotograf predaje korisniku finalni proizvod
-            \item Fotograf ispostavlja korisniku račun usluge
-            \item Korisnik plaća uslugu
-        \end{enumerate}
+        
+        \begin{figure}[H]
+    \centering
+\includegraphics[width=8cm]{Andjela/postprodukcija.png}
+    \caption{Dijagram aktivnosti postprodukcije}
+    \label{fig:RegistracijaZ}
+\end{figure}
+        
+        
 \end{itemize}
 % kraj-Andjela
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -920,7 +922,6 @@ Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onak
     \item Preduslov:
         \begin{itemize}
             \item Usluga koju je klijent izabrao je potpuno završena.
-            \item CEO menadžer ima uvid u broj računa firme.
             \item Klijent ima otvoren nalog za korišćenje sistema.
         \end{itemize}
     \item Postuslov:
