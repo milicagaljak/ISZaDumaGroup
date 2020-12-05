@@ -1062,8 +1062,8 @@ Izvedeni entiteti naše baze podataka su:
 \begin{enumerate}
     \item Klijent
     \item Zaposleni
-    \item Osoblje
     \item Menadžer
+    \item Osoblje
 \end{enumerate}
 
 \vspace{3mm}
@@ -1071,10 +1071,23 @@ Izvedeni entiteti naše baze podataka su:
 \textbf{Klijent} predstavlja specijalizaciju entiteta korisnik. On predstavlja osobe koje uzimaju usluge firme Duma Group. Atributi:
 \begin{itemize}
     \item id\_klijenta - id klijenta koji predstavlja strani kluč ka entitetu korisnik
-    \item broj\_kartice - broj kartice klijenta pomoću kog će izvršiti plačanje
+    \item broj\_kartice - broj kartice klijenta pomoću kog će izvršiti plaćanje
     \item datum\_rođenja
     \item pol\_osobe
 \end{itemize}
+
+\textbf{Zaposleni} predstavlja specijalizaciju entiteta korisnik. On predstavlja osobe koje su zaposlene u firmi Duma Group. Atributi:
+\begin{itemize}
+    \item id\_zaposlenog - id zaposlenog koji predstavlja strani kluč ka entitetu Korisnik
+    \item vrsta\_zaposlenog - koja je vrsta zaposlenog u pitanju(Osoblje, Menadžer, Administrator...)
+\end{itemize}
+
+\textbf{Menadžer} predstavlja specijalizaciju entiteta Zaposleni. On predstavlja osobu koja je zadužena za komunikaciju sa klijentom prilikom pravljenja narudžbine i za prenošenje detalja narudžbine osoblju. Atributi:
+\begin{itemize}
+    \item id\_menadžera - id zaposlenog koji predstavlja strani kluč ka entitetu Zaposleni
+    \item tip\_menadžera - za koju uslugu je ovaj menadžer zadužen(Ketering, Prenosivi bar, Fotografija) 
+\end{itemize}
+
 
 \vspace{3mm}
 
@@ -1131,7 +1144,15 @@ Agregirani entiteti naše baze podataka su:
 
 \subsubsection{Pogledi}
 
-Kako bi se pojednostavilo rukovanje bazom podataka, uveden je i pogled Plaćanje.
+Kako bi se pojednostavilo rukovanje bazom podataka, uveden je i pogled \textbf{Plaćanje}. Ovaj pogled sadrži sve detalje koji su potrebni kako bi klijent obavio plaćanje svog računa. Atributi:
+\begin{itemize}
+    \item datum\_plaćanja - datum kada je održan događaj za koji se plaća usluga, koji predstavlja primarni ključ ovog entiteta
+    \item id\_klijenta - id klijenta koji obavlja plaćanje, koji predstavlja strani ključ ka entitetu Klijent
+    \item ime\_korisnika 
+    \item ukupni\_račun - ukupni račun koji dobijemo kada saberemo cene svega onoga što je klijent naručio
+    \item plaćeno - govori nam da li je račun izmiren ili ne (vrednost je 0 ako nije, 1 ako jeste)
+    \item broj\_kartice - broj kartice klijenta pomoću kog će izvršiti plaćanje
+\end{itemize}
 
 \end{document}
 
