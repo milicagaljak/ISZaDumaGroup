@@ -1034,12 +1034,63 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \section{Model baze podataka}
 
+Analizom slučajeva upotrebe infrmacionog sistema firme Duma Group, projektovana je baza podataka. Na slici \ref{fig:dijagramTabela}  se može videti dijagram tabela koji joj odgovara.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{baza/dijagram_tabela.jpg}
     \caption{Dijagram tabela baze podataka}
     \label{fig:dijagramTabela}
 \end{figure}
+
+\subsubsection{Nezavisni entiteti}
+
+Nezavisni entitet naše baze podataka je \textbf{Korisnik}. Da bi se korisnik registrovao na sistem potrebna mu je email adresa, a da bi se prijavio potrebno mu je korisničko ime i šifra. Atributi:
+\begin{itemize}
+    \item korisničko\_ime - korisničko ime korisnika pomoću kog se prijavljuje na sistem
+    \item šifra - enkriptovana šifra korisnika potrebna pri prijavljivanju
+    \item ime
+    \item prezime
+    \item email - email adresa korisnika potrebna pri registrovanju
+    \item telefon - može da ostane nepopunjeno
+\end{itemize}
+
+
+\subsubsection{Izvedeni entiteti}
+
+Izvedeni entiteti naše baze podataka su:
+\begin{enumerate}
+    \item Klijent
+    \item Zaposleni
+    \item Osoblje
+    \item Menadžer
+\end{enumerate}
+
+\vspace{3mm}
+
+\textbf{Klijent} predstavlja specijalizaciju entiteta korisnik. On predstavlja osobe koje uzimaju usluge firme Duma Group. Atributi:
+\begin{itemize}
+    \item id\_klijenta - id klijenta koji predstavlja strani kluč ka entitetu korisnik
+    \item broj\_kartice - broj kartice klijenta pomoću kog će izvršiti plačanje
+    \item datum\_rođenja
+    \item pol\_osobe
+\end{itemize}
+
+\vspace{3mm}
+
+\subsubsection{Agregirani entiteti}
+
+Agregirani entiteti naše baze podataka su:
+\begin{enumerate}
+    \item Narudžbina
+    \item Dostava
+    \item Priprema narudžbine
+    \item Osoblje dostava
+\end{enumerate}
+
+\subsubsection{Pogledi}
+
+Kako bi se pojednostavilo rukovanje bazom podataka, uveden je i pogled Plaćanje.
 
 \end{document}
 
