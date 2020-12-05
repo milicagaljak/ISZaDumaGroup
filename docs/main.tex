@@ -674,12 +674,16 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \item Postuslov:
         \begin{itemize}
             \item Gotov je konačni proizvod
+            \item Na račun je dodata cena konačnog proizvoda
             \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
             \item Pregled sirovog materijala
             \item Izrada finalnog proizvoda od sakupljenih fotografija. Finalni proizvod može biti fotoalbum, fotografije u elektronskoj formi, buk
             \item Izrada finalnog proizvoda od sakupljenih video snimaka. Izbor najuspešnijih kadrova. Finalni proizvod može biti spot(od 30s do 180s), film (kraća i duža verzija)
+            \item Fotografi beleže u sistem cenu finalnog proizvoda
+            \item Sistem dodaje tu cenu na račun korisnika
+            
             \textit{Koraci 2 i 3 se ponavljaju sve dok ne bude zavrsena obrada sirovog materijala i spreman finalni proizvod}
         \end{enumerate}
         
@@ -1026,6 +1030,15 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \includegraphics[width=8cm]{Nina/DIjagram_aktivnosti_naplata.jpg}
     \caption{Dijagram aktivnosti naplate usluge}
     \label{fig:RegistracijaZ}
+\end{figure}
+
+\section{Model baze podataka}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{baza/dijagram_tabela.jpg}
+    \caption{Dijagram tabela baze podataka}
+    \label{fig:dijagramTabela}
 \end{figure}
 
 \end{document}
