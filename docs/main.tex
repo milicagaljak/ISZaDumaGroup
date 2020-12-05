@@ -1038,12 +1038,12 @@ Analizom slučajeva upotrebe infrmacionog sistema firme Duma Group, projektovana
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=12cm]{baza/dijagram_tabela.jpg}
+    \includegraphics[width=14cm, height=10cm]{baza/dijagram_tabela.jpg}
     \caption{Dijagram tabela baze podataka}
     \label{fig:dijagramTabela}
 \end{figure}
 
-\subsubsection{Nezavisni entiteti}
+\subsection{Nezavisni entiteti}
 
 Nezavisni entitet naše baze podataka je \textbf{Korisnik}. Da bi se korisnik registrovao na sistem potrebna mu je email adresa, a da bi se prijavio potrebno mu je korisničko ime i šifra. Atributi:
 \begin{itemize}
@@ -1056,7 +1056,7 @@ Nezavisni entitet naše baze podataka je \textbf{Korisnik}. Da bi se korisnik re
 \end{itemize}
 
 
-\subsubsection{Izvedeni entiteti}
+\subsection{Izvedeni entiteti}
 
 Izvedeni entiteti naše baze podataka su:
 \begin{enumerate}
@@ -1078,7 +1078,7 @@ Izvedeni entiteti naše baze podataka su:
 
 \vspace{3mm}
 
-\subsubsection{Agregirani entiteti}
+\subsection{Agregirani entiteti}
 
 Agregirani entiteti naše baze podataka su:
 \begin{enumerate}
@@ -1087,6 +1087,47 @@ Agregirani entiteti naše baze podataka su:
     \item Priprema narudžbine
     \item Osoblje dostava
 \end{enumerate}
+
+
+\vspace{3mm}
+
+\textbf{Narudžbina} Sadrži informacije o narudžbinama, odnosno njenim detaljima. Atributi:
+\begin{itemize}
+    \item id\_narudžbine - id narudžbine koja je poručena, primarni ključ ovog entiteta
+    \item id\_menadžera - id menadžera firme, koji predstavlja strani ključ ka entitetu Menadžer
+    \item id\_klijenta - id klijenta, koji predstavlja strani kluč ka entitetu Klijent
+    \item datum\_naručivanja - datum naručivanja usluge
+    \item datum\_događaja - datum za koji je usluga naručena
+    \item cena - cena usluge koja je poručena
+    \item plaćena - ukazuje da li je plaćena usluga (1 ili 0)
+    
+\end{itemize}
+
+\vspace{3mm}
+
+
+
+\textbf{Dostava} Sadrži informacije vezane za dostavu. Atributi:
+\begin{itemize}
+    \item id\_dostave - id dostave koja je zakazana, predstavlja primarni ključ ovog entiteta
+    \item id\_narudžbine - id narudžbine koja je poručena, predstavlja strani ključ ka entitetu Narudžbina
+    \item adresa - adresa gde treba dostaviti porudžbinu
+    \item datum - datum događaja
+    \item vreme\_početka - vreme početka događaja
+    
+\end{itemize}
+
+\vspace{3mm}
+
+\textbf{Osoblje\_Dostava} Povezuje entitete Osoblje i Dostava. Atributi:
+\begin{itemize}
+    \item id\_dostave - id dostave koja je zakazana, predstavlja strani ključ ka entitetu Dostava i deo primarnog ključa ovog entiteta
+    \item id\_osoblja - id osoblja koje vrši dostavu, predstavlja strani ključ ka entitetu Osoblje i deo primarnog ključa za ovaj entitet
+    
+\end{itemize}
+
+\vspace{3mm}
+
 
 \subsubsection{Pogledi}
 
