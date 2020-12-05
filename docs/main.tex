@@ -1034,7 +1034,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \section{Model baze podataka}
 
-Analizom slučajeva upotrebe infrmacionog sistema firme Duma Group, projektovana je baza podataka. Na slici \ref{fig:dijagramTabela}  se može videti dijagram tabela koji joj odgovara.
+Analizom slučajeva upotrebe informacionog sistema firme Duma Group, projektovana je baza podataka. Na slici \ref{fig:dijagramTabela}  se može videti dijagram tabela koji joj odgovara.
 
 \begin{figure}[H]
     \centering
@@ -1088,6 +1088,12 @@ Izvedeni entiteti naše baze podataka su:
     \item tip\_menadžera - za koju uslugu je ovaj menadžer zadužen(Ketering, Prenosivi bar, Fotografija) 
 \end{itemize}
 
+\textbf{Osoblje} predstavlja specijalizaciju entiteta Zaposleni. Osoblje čine osobe koje rade na samom događaju, kao što su barmeni, fotografi, šef kuhinje i dostavljač Atributi:
+\begin{itemize}
+    \item id\_osoblja - id zaposlenog koji predstavlja strani kluč ka entitetu Zaposleni
+    \item pozicija\_osoblja - koji član osoblja je u pitanju(barmen, fotograf, šef kuhinje, dostavljač) 
+\end{itemize}
+
 
 \vspace{3mm}
 
@@ -1127,6 +1133,18 @@ Agregirani entiteti naše baze podataka su:
     \item adresa - adresa gde treba dostaviti porudžbinu
     \item datum - datum događaja
     \item vreme\_početka - vreme početka događaja
+    
+\end{itemize}
+
+\vspace{3mm}
+
+\textbf{Priprema\_narudžbine} Sadrži informacije o pripremi narudžbine, i o detaljima njenim detaljima, kao i o posebnim zahtevima korisnika. Atributi:
+\begin{itemize}
+    \item id\_menadžera - id menadžera firme, koji predstavlja strani ključ ka entitetu Menadžer
+    \item id\_narudžbine - id narudžbine koja je poručena, strani ključ ka entitetu Narudžbina
+    \item id\_osoblja - id osoblja koje priprema narudžbinu, strani ključ ka entitetu Osoblje
+    \item instrukcija\_za\_osoblje - detaljan opis narudžbine i opis zadataka koje osoblje treba da ispuni
+    \item procenjeno\_vreme - očekivano vreme za pripremu narudžbine
     
 \end{itemize}
 
