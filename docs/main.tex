@@ -75,7 +75,7 @@
 
 \section{Uvod}
 
- Sistem je skup delova koji funkcionišu zajedno radi ostvarenja zajedničkog cilja ili svrhe. U domenu informatike i računarstva značajnu ulogu imaju \textbf{Informacioni sistemi}. Internacionalna federacija za obradu podataka (International Federation for Information Processing - IFIP) definiše informacioni sistem na sljedeći način: "Informacioni sistem je sistem koji prikuplja, pohranjuje, čuva, obrađuje i isporučuje informacije važne za organizaciju i društvo, tako da budu dostupne i upotrebljive za svakog ko se želi njima koristiti, uključujući poslovodstvo, klijente, zaposlene i ostale. Informacioni sistem aktivni je društveni sistem koji se može, ali i ne mora, koristiti      informacionom tehnologijom." 
+ Sistem je skup delova koji funkcionišu zajedno radi ostvarenja zajedničkog cilja ili svrhe. U domenu informatike i računarstva značajnu ulogu imaju \textbf{Informacioni sistemi}. Internacionalna federacija za obradu podataka (International Federation for Information Processing - IFIP) definiše informacioni sistem na sledeći način: "Informacioni sistem je sistem koji prikuplja, pohranjuje, čuva, obrađuje i isporučuje informacije važne za organizaciju i društvo, tako da budu dostupne i upotrebljive za svakog ko se želi njima koristiti, uključujući poslovodstvo, klijente, zaposlene i ostale. Informacioni sistem aktivni je društveni sistem koji se može, ali i ne mora, koristiti      informacionom tehnologijom." 
     
  Predmet ovog rada je razvijanje informacionog sistema za firmu Duma Group iz Novog Sada. Izrađen je kao grupni projekat u okviru predmeta Informacioni sistemi, koji se sluša na prvoj godini master studija Matematičkog fakulteta u Beogradu.
 
@@ -249,7 +249,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Veronika/Dijagram slucaja upotrebe PB.jpg}
+    \includegraphics[width=12cm]{Veronika/Dijagram slucaja upotrebe PB.jpg}
     \caption{Dijagram slučaja upotrebe Prenosivi bar}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -295,7 +295,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 1 PB.jpg}
+    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 1 PB.jpg}
     \caption{Dijagram aktivnosti - Odabir ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -337,7 +337,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 2 PB.jpg}
+    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 2 PB.jpg}
     \caption{Dijagram aktivnosti - Priprema ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -375,7 +375,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 3 PB.jpg}
+    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 3 PB.jpg}
     \caption{Dijagram aktivnosti - Dostava ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -421,7 +421,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=8cm]{Veronika/Dijagram aktivnosti 4 PB.jpg}
+    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 4 PB.jpg}
     \caption{Dijagram aktivnosti - Posluživanje gostiju}
     \label{fig:PrenosiviBar}
 \end{figure}
@@ -1171,6 +1171,48 @@ Kako bi se pojednostavilo rukovanje bazom podataka, uveden je i pogled \textbf{P
     \item plaćeno - govori nam da li je račun izmiren ili ne (vrednost je 0 ako nije, 1 ako jeste)
     \item broj\_kartice - broj kartice klijenta pomoću kog će izvršiti plaćanje
 \end{itemize}
+
+\section{Arhitektura sistema}
+U ovom poglavlju će biti predstavljena predložena arhitektura sistema.
+
+\subsection{Karakteristike sistema}
+...................
+\subsection{Tip i slojevi sistema}
+
+Za informacioni sistem izabrana je višeslojna komponentna klijent-server arhitektura, koja se sastoji od narednih slojeva:
+
+\begin{itemize}
+    \item Prezentacioni sloj
+    \item Klijentski kontroler
+    \item Serverski kontroler
+    \item Sloj podataka
+\end{itemize}
+
+
+\subsubsection{Prezentacioni sloj}
+
+Prezentacioni sloj predstavlja najviši nivo aplikacije i zadužen je da korisniku prikaže sadržaj koji dobija od nižih slojeva arhitekture. Njegov glavni zadatak je da korisniku na što efikasniji i jednostavniji način omogući korišćenje aplikacije.
+
+\begin{itemize}
+
+\item Registrovanje
+\item Prijavljivanje
+\item Izmena ličnih podataka
+\item Odabir ponude
+
+\end{itemize}
+\subsubsection{Klijentski kontroler}
+...............
+
+
+
+\subsubsection{Serverski kontroler}
+..........................
+
+
+\subsubsection{Sloj podataka}
+......................
+
 
 \end{document}
 
