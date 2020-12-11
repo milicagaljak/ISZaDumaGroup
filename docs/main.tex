@@ -1192,7 +1192,8 @@ Za informacioni sistem izabrana je višeslojna komponentna klijent-server arhite
 \subsubsection{Prezentacioni sloj}
 
 Prezentacioni sloj predstavlja najviši nivo aplikacije i zadužen je da korisniku prikaže sadržaj koji dobija od nižih slojeva arhitekture. Njegov glavni zadatak je da korisniku na što efikasniji i jednostavniji način omogući korišćenje aplikacije.
-
+\newline
+Sastoji se iz komponenti:
 \begin{itemize}
 
 \item Registrovanje
@@ -1202,7 +1203,15 @@ Prezentacioni sloj predstavlja najviši nivo aplikacije i zadužen je da korisni
 
 \end{itemize}
 \subsubsection{Klijentski kontroler}
-...............
+
+Glavni zadatak klijentskog kontrolera je da komunicira sa serverskim slojem sistema. Takođe, zadužen je za prosleđivanje podataka prezentacionom sloju, koji dalje predstavlja podatke korisniku.
+\newline
+Sastoji se iz komponenti:
+\begin{itemize}
+\item Validacija
+\item Dohvatanje podataka
+\item Autorizacija i autentifikacija
+\end{itemize}
 
 
 
@@ -1211,7 +1220,11 @@ Prezentacioni sloj predstavlja najviši nivo aplikacije i zadužen je da korisni
 
 
 \subsubsection{Sloj podataka}
-......................
+Sloj podataka sadrži sve potrebne mehanizme za bezbedno i konzistentno pristupanje bazi podataka. Zadatak ovog sloja je da pruži sve potrebne podatke iz baze uz jednostavan i siguran  pristup.\newline
+Sastoji se od komponente:
+\begin{itemize}
+    \item Baza podataka
+\end{itemize}
 
 
 \end{document}
