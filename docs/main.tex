@@ -1176,7 +1176,23 @@ Kako bi se pojednostavilo rukovanje bazom podataka, uveden je i pogled \textbf{P
 U ovom poglavlju će biti predstavljena predložena arhitektura sistema.
 
 \subsection{Karakteristike sistema}
-...................
+Arhitektura sistema je razmatrana tako da ispuni što više od navedenih uslova:
+\begin{itemize}
+    \item Dostupnost
+    \item Ažurnost
+    \item Odziv
+    \item Jednostavnost upotrebe
+    \item Stabilnost
+    \item Bezbednost
+\end{itemize}
+Odabrana je Veb aplikacija jer pruža visok stepen dostupnosti i ažurnosti, jer izmenom Veb aplikacije svi korisnici sistema automatski dobijaju izmene. Odziv se lako postiže sve dok korisnik ima računar prosečnih performansi i solidnu internet konekciju. Jednostavnost upotrebe se dobija pažljivo dizajniranim korisničkim interfejsom, pri čemu je glavna motivacija da on bude jednostavan i da ne opterećuje korisnika nepotrebnim detaljima pri korišćenju aplikacije. Bezbednost je postignuta troslojnom arhitekturom.
+
+\begin{enumerate}
+    \item Tip aplikacije: Veb aplikacija
+    \item Strategija isporučivanja: Jedan serverski i više klijentskih računara
+    \item Tehnologije: Angular framework, NodeJS, Java, nerelaciona baza podataka
+\end{enumerate}
+
 \subsection{Tip i slojevi sistema}
 
 Za informacioni sistem izabrana je višeslojna komponentna klijent-server arhitektura, koja se sastoji od narednih slojeva:
