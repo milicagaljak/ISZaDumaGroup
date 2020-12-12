@@ -1216,7 +1216,16 @@ Sastoji se iz komponenti:
 
 
 \subsubsection{Serverski kontroler}
-..........................
+
+Serverski kontroler ima sličnu svrhu kao klijentski kontroler, s tim što klijent nema pristup ovom delu aplikacije. Ovo je obezbeđeno prvenstveno zbog bezbednosti i kako bi se u ovom delu mogla izvršiti detaljnija autorizacija i validacija podataka. Ovde se takođe vrši i komunikacija sa bazom kao i neophodna izračunavanja nad podacima dobijenim iz baze. 
+\newline
+Sastoji se iz komponenti:
+\begin{itemize}
+\item Pregled i izmena ličnih podataka
+\item Izračunavanje ukupne cene i naplata
+\item Dohvatanje podataka
+\item Autorizacija i autentifikacija
+\end{itemize}
 
 
 \subsubsection{Sloj podataka}
