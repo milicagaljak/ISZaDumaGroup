@@ -1,0 +1,18 @@
+#zoomDiv {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  transform: scale(0.58);
+  -webkit-transform: scale(0.58);
+  -moz-transform: scale(0.58);
+  -ms-transform: scale(0.58);
+  transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -ms-transform-origin: top left;
+}
+#zoomDiv > .template, #zoomDiv > .screen {
+  width: 172.41379310344826%;
+  height: 172.41379310344826%;
+}
