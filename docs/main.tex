@@ -103,8 +103,8 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \subsection{Učesnici u sistemu}
     
     \begin{enumerate}
-        \item Klijent su svi oni kojima je potrebna usluga koju pruža firma Duma Group. Po završetku usluge vrše uplatu definisanih sredstava preko žiro računa.
-        \item Menadžer je osoba koja je zadužena za komunikaciju između klijenta i zaposlenih. Prihvata ponudu i pristupa informacijama za kontaktiranje zaposlenih i klijenata putem informacionog sistema.
+        \item Klijenti su svi oni kojima je potrebna usluga koju pruža firma Duma Group. Po završetku usluge vrše uplatu definisanih sredstava preko žiro računa.
+        \item Menadžer je osoba koja je zadužena za komunikaciju između klijenata i zaposlenih. Prihvata ponudu i pristupa informacijama za kontaktiranje zaposlenih i klijenata putem informacionog sistema.
         \item Administrator je osoba koja je zadužena da obavi registraciju zaposlenog koji nema kreiran nalog u sistemu, kao i da obriše nalog nakon prekida radnog odnosa sa zaposlenim.
         \item Osoblje su svi oni koji su zaposleni za određeni događaj. Zadatke dobijaju od zaposlenih kao što je menadžer, šef kuhinje...
         \item Šef kuhinje je osoba koja je zadužena da upravlja organizacijom posla u kuhinji. Nadređeni je osoblju u kuhinji i zadužen je za podelu posla u kuhinji. Informacije o samom događaju prima od menadžera.
@@ -208,7 +208,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
-            \item Korisnik je priavljen i može da koristi funkcionalnosti koje sistem pruža
+            \item Korisnik je prijavljen i može da koristi funkcionalnosti koje sistem pruža
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
@@ -278,19 +278,19 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-		    \item Klijent se klikom na dugme opredeljuje za uslugu ''Prenosivi bar'' nakon čega sistem preusmerava klijenta na mejl menadžera za ovu uslugu
-		    \item Klijent objašnjava menadžeru kog je tipa događaj i za šta mu je potreban bar
-		    \item Menadžer mu na mejl šalje ponudu iz  sistema koja najviše odgovara tom tipu događaja, koja se sastoji od slika, snimaka i cene za konkretne sadržaje
-		    \item Klijent bira sadržaj koji želi iz ponude i svaki odabir se beleži u sistem
-		    \item Klijent dogovara sa menadzerom detalje o datumu događaja, njegovom trajanju, dodatnim zahtevima i upitima
-		    \item Menadžer beleži sve dogovorene detalje u sistemu i rezerviše odgovarajući datum u sistemu
-		    \item Menadžer u sistemu formira račun za klijenta na koji se dodaju cene prenosivog bara i dekoracije. Cene pića dodaju se naknadno jer klijent plaća samo ono što je na događaju popijeno.
+          \item  Klijent se klikom na dugme opredeljuje za uslugu ''Prenosivi bar''.
+        \item Klijent bira datum, mesto i vreme početka događaja za koji naručuje ovu uslugu.
+        \item Klijent bira sadržaj koji želi iz ponude i svaki odabir se beleži u sistem.
+        \item Klijent potvrđuje izabranu porudžbinu.
+        \item Menadžeru stiže obaveštenje od aplikacije da ima novu porudžbinu keteringa.
+        \item Menadžer prihvata porudžbinu klijenta.
+        \item Sistem formira račun za klijenta na koji se dodaju cene prenosivog bara i dekoracije. Cene pića dodaju se naknadno jer klijent plaća samo ono što je na događaju popijeno.
         \end{enumerate}
-    \item Alternativni tok:
+        \item Alternativni tok:
         \begin{itemize}
             \item Korak 5 - Sadržaj koji je klijent odabrao nije dostupan. U tom slucaju menadžer zamoli klijenta da odabere nešto drugo iz ponude i uputi ga na ponudu koja je slična onoj koju je tražio. Nakon toga klijent ponovo bira sadržaj za svoj događaj.
-        \end{itemize}
-\end{itemize}
+        \end{itemize}    
+    \end{itemize}
 
 
 \begin{figure}[H]
@@ -440,7 +440,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Administrator registruje zaposlenog koji nema otvoren nalog u sistem Douma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
+        \item Administrator registruje zaposlenog koji nema otvoren nalog u sistem Duma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
@@ -454,7 +454,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Zaposleni je registrovan u sistem i dobija informacije kako da ga koristi.
+            \item Zaposleni je registrovan i dobija informacije kako da ga koristi.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
@@ -1256,6 +1256,43 @@ Sastoji se od komponente:
     \includegraphics[width=14cm, height=10cm]{dijagram_komponenti.png}
     \caption{Dijagram predložene arhitekture sistema}
     \label{fig:dijagramTabela}
+\end{figure}
+
+\section{Predlog korisničkog interfejsa}
+
+U ovoj sekciji biće prikazan predlog korisničkog interfejsa sajta firme Duma Group. Sajt koriste klijenti firme.
+
+\subsection{Registracija klijenata}
+
+Na slici \ref{fig:ki_reg} je prikazan način registrovanja klijenata. To je ujedno i početna strana koja se otvara kada se pristupi sajtu firme. Kako bi se registrovao, klijent mora da unese ime, prezime, datum rođenja, pol, korisničko ime, broj kreditne kartice, lozinku, potvrđenu lozinku, email adresu i email za povratak naloga. Registracija se završava klikom na dugme "Registruj se". Ukoliko klijent već ima napravljen nalog, može da klikne na link "Prijavi se" i da se prijavi kao što je objašnjeno u nastavku.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=8cm]{interfejs/Registracija.png}
+    \caption{Registracija klijenta}
+    \label{fig:ki_reg}
+\end{figure}
+
+\subsection{Prijava klijenata}
+
+Na slici \ref{fig:ki_prijava} je prikazan način na koji se korisnik prijavljuje. Potrebno je da unese postojeće ime i lozinku i da klikne na dugme "Prijavi se".
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=8cm]{interfejs/Prijava.png}
+    \caption{Prijava klijenta}
+    \label{fig:ki_prijava}
+\end{figure}
+
+\subsection{Profil klijenta}
+
+Nakon što se klijent prijavio, na ekranu će mu biti prikazana strana \ref{fig:ki_profil} na kojoj se nalaze informacije o korisniku koje je naveo pri registraciji i slika koju može da promeni. Takođe, klikom na neko od dugmića "Ketering", "Fotografija" ili "Prenosivi bar" korisnik može da odabere uslugu za koju je zainteresovan. Na profilu se nalazi i ukupno zaduženje za usluge koje je klijent odabrao, kao i link "PLATI" ka stranici za izmirivanje tog zaduženja.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=8cm]{interfejs/Profil.png}
+    \caption{Profil}
+    \label{fig:ki_profil}
 \end{figure}
 
 \end{document}
