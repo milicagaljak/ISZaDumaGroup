@@ -545,8 +545,8 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \end{itemize}
     \item Preduslovi:
         \begin{itemize}
-            \item Klijent se registrovao na sajt
-            \item Na raspolaganju je spisak ponuda različitih sa pratećim slikama i snimcima
+            \item Klijent se prijavio na sistem
+            \item Na raspolaganju je spisak različitih ponuda sa pratećim slikama i snimcima
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
@@ -555,14 +555,14 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Klijent se ulogovao na sajt
-            \item Klijent se opredeljuje za uslugu ''Fotografija'', nakon čega sistem preusmerava klijenta na mejl menadžera za ovu uslugu
-            \item Klijent objašnjava menadžeru kog je tipa događaj i kakve fotografe želi
-            \item Menadžer mu preko sistema šalje ponudu iz ''Fotografije'' sa pratećim informacijama o ceni i finalnom proizvodu 
-            \item Klijent bira sadržaj iz ponude i to se beleži u sistem 
+            \item Klijent se klikom na dugme opredeljuje za uslugu ''Fotografija''.
+            \item Klijent bira datum, mesto, vreme početka događaja, kao i dužinu trajanja.
+            \item Klijent bira neku od ponuda na osnovu toga kog je tipa događaj.
+            \item Klijent potvrđuje izabranu porudžbinu.
+            \item Menadžeru stiže obaveštenje od aplikacije da ima novu porudžbinu za fotografiju.
             \item Klijent se dogovara sa menadžerom oko detalja dogadaja (datum događaja, trajanje, dodatni zahtevi)
-            \item Menadžer beleži sve dogovorene detalje u sistem i rezerviše odgovarajući datum u sistemu
-            \item Menadžer u sistemu formira račun za klijenta na koji se dodaje cena fotografisanja i izrada finalnog proizvoda(foto album, buk, video snimak...)
+            \item Menadžer prihvata porudžbinu klijenta.
+            \item Sistem formira račun za klijenta na koji se dodaje cena fotografisanja i izrada finalnog proizvoda(foto album, buk, video snimak...)
         \end{enumerate}
         
     \begin{figure}[H]
