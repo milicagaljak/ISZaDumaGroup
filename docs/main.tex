@@ -282,7 +282,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \item Klijent bira datum, mesto i vreme početka događaja za koji naručuje ovu uslugu.
         \item Klijent bira sadržaj koji želi iz ponude i svaki odabir se beleži u sistem.
         \item Klijent potvrđuje izabranu porudžbinu.
-        \item Menadžeru stiže obaveštenje od aplikacije da ima novu porudžbinu keteringa.
+        \item Menadžeru stiže obaveštenje od aplikacije da ima novu porudžbinu prenosivog bara.
         \item Menadžer prihvata porudžbinu klijenta.
         \item Sistem formira račun za klijenta na koji se dodaju cene prenosivog bara i dekoracije. Cene pića dodaju se naknadno jer klijent plaća samo ono što je na događaju popijeno.
         \end{enumerate}
@@ -1327,6 +1327,28 @@ Pritiskom na dugme "Prenosivi bar" na profilu, otvara se formular za naručivanj
     \includegraphics[width=14cm, height=8cm]{interfejs/Prenosivi bar.png}
     \caption{Prenosivi bar}
     \label{fig:ki_prenosivibar}
+\end{figure}
+
+\subsection{Plaćanje}
+
+Pritiskom na dugme "PLATI" na profilu, otvara se formular za plaćanje usluga, kao što je prikazano na slici \ref{fig:ki_placanje}. Korisnik treba da popuni polja ime, prezime, adresa i broj kreditne kartice. Nakon toga, klikom na dugme "Plati", novac se skida sa njegovog računa, a cena koja se nalazi na njegovom profilu se postavlja na 0din.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=8cm]{interfejs/Placanje.png}
+    \caption{Plaćanje}
+    \label{fig:ki_placanje}
+\end{figure}
+
+\subsection{Potvrda narudžbine}
+
+Nakon što je korisnik popunio formular na strani posvećenoj konkretnoj usluzi, klikom na dugme "Naruči" otvara mu se strana kao na slici \ref{fig:ki_kraj}. Ovde korisnik vidi da li je njegova porudžbina uspešno zabeležena. Klikom na dugme "Napravi novu porudžbinu" sistem vraća korisnika na profil, gde može da izabere sledeću porudžbinu. Klikom na dugme "Odjavi se" sistem vraća korisnika na stranu "Prijava" kako bi mogao opet da se prijavi.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm, height=8cm]{interfejs/Kraj.png}
+    \caption{Potvrda narudžbine}
+    \label{fig:ki_kraj}
 \end{figure}
 
 \end{document}
