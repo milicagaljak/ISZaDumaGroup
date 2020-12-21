@@ -30,6 +30,9 @@
       ]
     },
     "bd490e74-1b05-4a00-9e0c-be015d62f1e1" : {
+      "Rectangle_1" : [
+        "924ebe8e-0181-48fd-813c-43b8884bbff4"
+      ]
     },
     "d12245cc-1680-458d-89dd-4f0d7fb22724" : {
       "Rectangle_1" : [

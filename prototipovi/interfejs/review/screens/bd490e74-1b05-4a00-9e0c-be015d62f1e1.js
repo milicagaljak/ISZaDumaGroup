@@ -2,8 +2,8 @@ var content='<div class="ui-page" deviceName="web" deviceType="desktop" deviceWi
     <div id="t-f39803f7-df02-4169-93eb-7547fb8c961a" class="template growth-both devWeb canvas firer commentable non-processed" alignment="left" name="Template 1" width="1280" height="800">\
     <div id="backgroundBox"><div class="colorLayer"></div><div class="imageLayer"></div></div>\
     <div id="alignmentBox">\
-      <link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608294610919.css" />\
-      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608294610919-ie.css" /><![endif]-->\
+      <link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608578179565.css" />\
+      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608578179565-ie.css" /><![endif]-->\
       <!--[if lte IE 8]><![endif]-->\
       <div class="freeLayout">\
       </div>\
@@ -15,12 +15,12 @@ var content='<div class="ui-page" deviceName="web" deviceType="desktop" deviceWi
     <div id="s-bd490e74-1b05-4a00-9e0c-be015d62f1e1" class="screen growth-vertical devWeb canvas PORTRAIT firer commentable non-processed" alignment="left" name="Placanje" width="1920" height="1080">\
     <div id="backgroundBox"><div class="colorLayer"></div><div class="imageLayer"></div></div>\
     <div id="alignmentBox">\
-      <link type="text/css" rel="stylesheet" href="./resources/screens/bd490e74-1b05-4a00-9e0c-be015d62f1e1-1608294610919.css" />\
-      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/screens/bd490e74-1b05-4a00-9e0c-be015d62f1e1-1608294610919-ie.css" /><![endif]-->\
-      <!--[if lte IE 8]><link type="text/css" rel="stylesheet" href="./resources/screens/bd490e74-1b05-4a00-9e0c-be015d62f1e1-1608294610919-ie8.css" /><![endif]-->\
+      <link type="text/css" rel="stylesheet" href="./resources/screens/bd490e74-1b05-4a00-9e0c-be015d62f1e1-1608578179565.css" />\
+      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/screens/bd490e74-1b05-4a00-9e0c-be015d62f1e1-1608578179565-ie.css" /><![endif]-->\
+      <!--[if lte IE 8]><link type="text/css" rel="stylesheet" href="./resources/screens/bd490e74-1b05-4a00-9e0c-be015d62f1e1-1608578179565-ie8.css" /><![endif]-->\
       <div class="freeLayout">\
       <div id="s-Group_1" class="group firer ie-background commentable non-processed" customid="Group_1" datasizewidth="1024.0px" datasizeheight="735.0px" >\
-        <div id="s-Rectangle_1" class="pie rectangle manualfit firer mouseenter mouseleave mousedown mouseup commentable non-processed" customid="Rectangle_2"   datasizewidth="399.8px" datasizeheight="131.9px" datasizewidthpx="399.8322106922433" datasizeheightpx="131.9483790371297" dataX="868.0" dataY="851.0" >\
+        <div id="s-Rectangle_1" class="pie rectangle manualfit firer mouseenter mouseleave mousedown mouseup click commentable non-processed" customid="Rectangle_2"   datasizewidth="399.8px" datasizeheight="131.9px" datasizewidthpx="399.8322106922433" datasizeheightpx="131.9483790371297" dataX="868.0" dataY="851.0" >\
           <div class="backgroundLayer">\
             <div class="colorLayer"></div>\
             <div class="imageLayer"></div>\
@@ -182,7 +182,7 @@ var content='<div class="ui-page" deviceName="web" deviceType="desktop" deviceWi
           </div>\
         </div>\
       </div>\
-      <div id="s-Paragraph_8" class="pie richtext autofit firer ie-background commentable non-processed" customid="Paragraph"   datasizewidth="507.1px" datasizeheight="54.0px" dataX="814.7" dataY="131.7" >\
+      <div id="s-Paragraph_8" class="pie richtext autofit firer ie-background commentable non-processed" customid="Paragraph"   datasizewidth="423.0px" datasizeheight="54.0px" dataX="814.7" dataY="131.7" >\
         <div class="backgroundLayer">\
           <div class="colorLayer"></div>\
           <div class="imageLayer"></div>\
@@ -191,7 +191,7 @@ var content='<div class="ui-page" deviceName="web" deviceType="desktop" deviceWi
           <div class="paddingLayer">\
             <div class="content">\
               <div class="valign">\
-                <span id="rtr-s-Paragraph_8_0">Va&scaron; račun iznosi: 15000din</span>\
+                <span id="rtr-s-Paragraph_8_0">Va&scaron; račun iznosi: 400e</span>\
               </div>\
             </div>\
           </div>\

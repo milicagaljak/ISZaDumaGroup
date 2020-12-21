@@ -2,8 +2,8 @@ var content='<div class="ui-page" deviceName="web" deviceType="desktop" deviceWi
     <div id="t-f39803f7-df02-4169-93eb-7547fb8c961a" class="template growth-both devWeb canvas firer commentable non-processed" alignment="left" name="Template 1" width="1280" height="800">\
     <div id="backgroundBox"><div class="colorLayer"></div><div class="imageLayer"></div></div>\
     <div id="alignmentBox">\
-      <link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608294610919.css" />\
-      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608294610919-ie.css" /><![endif]-->\
+      <link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608578179565.css" />\
+      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/templates/f39803f7-df02-4169-93eb-7547fb8c961a-1608578179565-ie.css" /><![endif]-->\
       <!--[if lte IE 8]><![endif]-->\
       <div class="freeLayout">\
       </div>\
@@ -15,9 +15,9 @@ var content='<div class="ui-page" deviceName="web" deviceType="desktop" deviceWi
     <div id="s-5fe170ae-ba5e-4556-b481-50c0e77315cd" class="screen growth-vertical devWeb canvas PORTRAIT firer commentable non-processed" alignment="left" name="Prenosivi bar" width="1920" height="1080">\
     <div id="backgroundBox"><div class="colorLayer"></div><div class="imageLayer"></div></div>\
     <div id="alignmentBox">\
-      <link type="text/css" rel="stylesheet" href="./resources/screens/5fe170ae-ba5e-4556-b481-50c0e77315cd-1608294610919.css" />\
-      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/screens/5fe170ae-ba5e-4556-b481-50c0e77315cd-1608294610919-ie.css" /><![endif]-->\
-      <!--[if lte IE 8]><link type="text/css" rel="stylesheet" href="./resources/screens/5fe170ae-ba5e-4556-b481-50c0e77315cd-1608294610919-ie8.css" /><![endif]-->\
+      <link type="text/css" rel="stylesheet" href="./resources/screens/5fe170ae-ba5e-4556-b481-50c0e77315cd-1608578179565.css" />\
+      <!--[if IE]><link type="text/css" rel="stylesheet" href="./resources/screens/5fe170ae-ba5e-4556-b481-50c0e77315cd-1608578179565-ie.css" /><![endif]-->\
+      <!--[if lte IE 8]><link type="text/css" rel="stylesheet" href="./resources/screens/5fe170ae-ba5e-4556-b481-50c0e77315cd-1608578179565-ie8.css" /><![endif]-->\
       <div class="freeLayout">\
       <div id="s-Group_1" class="group firer ie-background commentable non-processed" customid="Group_1" datasizewidth="1024.0px" datasizeheight="735.0px" >\
         <div id="s-Rectangle_1" class="pie rectangle manualfit firer mouseenter mouseleave mousedown mouseup click commentable non-processed" customid="Rectangle_2"   datasizewidth="319.8px" datasizeheight="110.5px" datasizewidthpx="319.7890624999993" datasizeheightpx="110.53282883663462" dataX="1000.0" dataY="934.0" >\

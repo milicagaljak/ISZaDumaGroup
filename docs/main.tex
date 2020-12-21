@@ -6,9 +6,9 @@
 \usepackage{url}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{dirtytalk}
 \usepackage{graphicx}
 \usepackage{here} 
-
 
 
 \usepackage[english,serbian]{babel}
@@ -110,7 +110,6 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \item Šef kuhinje je osoba koja je zadužena da upravlja organizacijom posla u kuhinji. Nadređeni je osoblju u kuhinji i zadužen je za podelu posla u kuhinji. Informacije o samom događaju prima od menadžera.
         \item Fotografi su osobe koje su zadužene za fotografisanje i snimanje gostiju na događaju. Nakon događaja njihov zadatak je da obrade materijal i pripreme finalni proizvod u vidu albuma ili buka. Informacije o događaju i zahtevima klijenta prima od menadžera.
         \item Barmen je osoba koja je zadužena za posluživanje pića gostima i beleženje toga šta je popijeno, u sklopu usluge Prenosivi bar
-        \item Gosti su oni koji bivaju usluženi na događaju.
         \item Dostavljač je osoba koja je zadužena da isporuči poručenu opciju od strane klijenta. Detalje o samoj isporuci dobija putem aplikacije.
     \end{enumerate}
     
@@ -713,7 +712,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 \label{fig:Ketering}
 \end{figure}
 
-\subsubsection{Noručivanje keteringa i prihvatanje ponude}
+\subsubsection{Naručivanje keteringa i prihvatanje ponude}
 \begin{itemize}
     \item Kratak opis:
     \begin{itemize}
@@ -1270,115 +1269,99 @@ U ovoj sekciji biće prikazan predlog korisničkog interfejsa sajta firme Duma G
 
 \subsection{Registracija klijenata}
 
-Na slici \ref{fig:ki_reg} je prikazan način registrovanja klijenata. To je ujedno i početna strana koja se otvara kada se pristupi sajtu firme. Kako bi se registrovao, klijent mora da unese ime, prezime, datum rođenja, pol, korisničko ime, broj kreditne kartice, lozinku, potvrđenu lozinku, email adresu i email za povratak naloga. Registracija se završava klikom na dugme "Registruj se". Ukoliko klijent već ima napravljen nalog, može da klikne na link "Prijavi se" i da se prijavi kao što je objašnjeno u nastavku.
+Na slici \ref{fig:ki_reg} je prikazan način registrovanja klijenata. To je ujedno i početna strana koja se otvara kada se pristupi sajtu firme. Kako bi se registrovao, klijent mora da unese ime, prezime, datum rođenja, pol, korisničko ime, broj kreditne kartice, lozinku, potvrđenu lozinku, email adresu i email za povratak naloga. Registracija se završava klikom na dugme \say{Registruj se}. Ukoliko klijent već ima napravljen nalog, može da klikne na link \say{Prijavi se}, a zatim da se prijavi kao što je objašnjeno u nastavku.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Registracija.png}
+    \includegraphics[width=12cm]{interfejs/Registracija.png}
     \caption{Registracija klijenta}
     \label{fig:ki_reg}
 \end{figure}
 
 \subsection{Prijava klijenata}
 
-Na slici \ref{fig:ki_prijava} je prikazan način na koji se korisnik prijavljuje. Potrebno je da unese postojeće ime i lozinku i da klikne na dugme "Prijavi se".
+Na slici \ref{fig:ki_prijava} je prikazan način na koji se korisnik prijavljuje. Potrebno je da unese postojeće korisničko ime i lozinku i da klikne na dugme \say{Prijavi se}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Prijava.png}
+    \includegraphics[width=12cm]{interfejs/Prijava.png}
     \caption{Prijava klijenta}
     \label{fig:ki_prijava}
 \end{figure}
 
 \subsection{Profil klijenta}
 
-Nakon što se klijent prijavio, na ekranu će mu biti prikazana strana \ref{fig:ki_profil} na kojoj se nalaze informacije o korisniku koje je naveo pri registraciji i slika koju može da promeni. Takođe, klikom na neko od dugmića "Ketering", "Fotografija" ili "Prenosivi bar" korisnik može da odabere uslugu za koju je zainteresovan. Na profilu se nalazi i ukupno zaduženje za usluge koje je klijent odabrao, kao i link "PLATI" ka stranici za izmirivanje tog zaduženja.
+Nakon što se klijent prijavio, na ekranu će mu biti prikazana strana \ref{fig:ki_profil} na kojoj se nalaze informacije o korisniku koje je naveo pri registraciji i slika koju može da promeni. Takođe, klikom na neko od dugmića \say{Ketering},  \say{Fotografija} ili \say{Prenosivi bar} korisnik može da odabere uslugu za koju je zainteresovan. Na profilu se nalazi i ukupno zaduženje za usluge koje je klijent odabrao, kao i link \say{PLATI} ka stranici za izmirivanje tog zaduženja.
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Profil.png}
+    \includegraphics[width=12cm]{interfejs/Profil.png}
     \caption{Profil}
     \label{fig:ki_profil}
 \end{figure}
 
 \subsection{Fotografija}
 
-Kao što je već opisano, na profilu korisnik može da izabere jednu od tri usluge koje sistem nudi. Klikom na dugme "Fotografija" otvara se formular za naručivanje ove usluge kao na slici \ref{fig:ki_fotografija}. Korisnik treba da popuni polja datum događaja, vreme događaja, mesto događaja, dužina trajanja događaja i da odabere tip fotografisanja koji želi da poruči. Informacije o ceni fotografisanja prikazane su u sekciji za odabir vrste fotografisanja. Proces naručivanja se završava klikom na dugme "Naruči", a cena se dodaje na ukupnu cenu koju korisnik treba da plati i ona je prikazana na profilu korisnika. 
+Kao što je već opisano, na profilu korisnik može da izabere jednu od tri usluge koje sistem nudi. Klikom na dugme \say{Fotografija} otvara se formular za naručivanje ove usluge kao na slici \ref{fig:ki_fotografija}. Korisnik treba da popuni polja datum događaja, vreme događaja, mesto događaja, dužina trajanja događaja i da odabere tip fotografisanja koji želi da poruči. Informacije o ceni fotografisanja prikazane su u sekciji za odabir vrste fotografisanja. Proces naručivanja se završava klikom na dugme \say{Naruči}, a cena se dodaje na ukupnu cenu koju korisnik treba da plati i ona je prikazana na profilu korisnika. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Fotografija.png}
+    \includegraphics[width=12cm]{interfejs/Fotografija.png}
     \caption{Fotografija}
     \label{fig:ki_fotografija}
 \end{figure}
 
 \subsection{Ketering}
 
-Slično kao što je već opisano, pritiskom na dugme "Ketering" na profilu, otvara se formular za naručivanje ove usluge, kao što je prikazano na slici \ref{fig:ki_ketering}. Korisnik treba da popuni polja datum događaja, vreme događaja, mesto događaja, broj osoba i da odabere tip keteringa koji želi da poruči. Proces naručivanja se završava klikom na dugme "Naruči", a cena se dodaje na ukupnu cenu koju korisnik treba da plati i ona je prikazana na profilu korisnika.  
+Slično kao što je već opisano, pritiskom na dugme \say{Ketering} na profilu, otvara se formular za naručivanje ove usluge, kao što je prikazano na slici \ref{fig:ki_ketering}. Korisnik treba da popuni polja datum događaja, vreme događaja, mesto događaja, broj osoba i da odabere tip keteringa koji želi da poruči. Proces naručivanja se završava klikom na dugme \say{Naruči}, a cena se dodaje na ukupnu cenu koju korisnik treba da plati i ona je prikazana na profilu korisnika.  
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Ketering.png}
+    \includegraphics[width=12cm]{interfejs/Ketering.png}
     \caption{Ketering}
     \label{fig:ki_ketering}
 \end{figure}
 
 \subsection{Prenosivi bar}
 
-Pritiskom na dugme "Prenosivi bar" na profilu, otvara se formular za naručivanje ove usluge, kao što je prikazano na slici \ref{fig:ki_prenosivibar}. Korisnik treba da popuni polja datum događaja, vreme događaja, mesto događaja, dužina trajanja događaja da izabere pića i dekoraciju. Proces naručivanja se završava klikom na dugme "Naruči", a cena se dodaje na ukupnu cenu koju korisnik treba da plati i ona je prikazana na profilu korisnika.  
+Pritiskom na dugme \say{Prenosivi bar} na profilu, otvara se formular za naručivanje ove usluge, kao što je prikazano na slici \ref{fig:ki_prenosivibar}. Korisnik treba da popuni polja datum događaja, vreme događaja, mesto događaja, dužina trajanja događaja da izabere pića i dekoraciju. Proces naručivanja se završava klikom na dugme \say{Naruči}, a cena se dodaje na ukupnu cenu koju korisnik treba da plati i ona je prikazana na profilu korisnika.  
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Prenosivi bar.png}
+    \includegraphics[width=12cm]{interfejs/Prenosivi bar.png}
     \caption{Prenosivi bar}
     \label{fig:ki_prenosivibar}
 \end{figure}
 
 \subsection{Plaćanje}
 
-Pritiskom na dugme "PLATI" na profilu, otvara se formular za plaćanje usluga, kao što je prikazano na slici \ref{fig:ki_placanje}. Korisnik treba da popuni polja ime, prezime, adresa i broj kreditne kartice. Nakon toga, klikom na dugme "Plati", novac se skida sa njegovog računa, a cena koja se nalazi na njegovom profilu se postavlja na 0din.  
+Pritiskom na dugme \say{PLATI} na profilu, otvara se formular za plaćanje usluga, kao što je prikazano na slici \ref{fig:ki_placanje}. Korisnik treba da popuni polja ime, prezime, adresa i broj kreditne kartice. Nakon toga, klikom na dugme \say{Plati}, novac se skida sa njegovog računa, a cena koja se nalazi na njegovom profilu se postavlja na 0e.  
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Placanje.png}
+    \includegraphics[width=12cm]{interfejs/Placanje.png}
     \caption{Plaćanje}
     \label{fig:ki_placanje}
 \end{figure}
 
 \subsection{Potvrda narudžbine}
 
-Nakon što je korisnik popunio formular na strani posvećenoj konkretnoj usluzi, klikom na dugme "Naruči" otvara mu se strana kao na slici \ref{fig:ki_kraj}. Ovde korisnik vidi da li je njegova porudžbina uspešno zabeležena. Klikom na dugme "Napravi novu porudžbinu" sistem vraća korisnika na profil, gde može da izabere sledeću porudžbinu. Klikom na dugme "Odjavi se" sistem vraća korisnika na stranu "Prijava" kako bi mogao opet da se prijavi.
+Nakon što je korisnik popunio formular na strani posvećenoj konkretnoj usluzi, klikom na dugme \say{Naruči} otvara mu se strana kao na slici \ref{fig:ki_kraj}. Ovde korisnik vidi da li je njegova porudžbina uspešno zabeležena. Klikom na dugme \say{Napravi novu porudžbinu} sistem vraća korisnika na profil, gde može da izabere sledeću porudžbinu. Klikom na dugme \say{Odjavi se} sistem vraća korisnika na stranu \say{Prijava} kako bi mogao opet da se prijavi.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=8cm]{interfejs/Kraj.png}
+    \includegraphics[width=12cm]{interfejs/Kraj.png}
     \caption{Potvrda narudžbine}
     \label{fig:ki_kraj}
 \end{figure}
 
+\section{Zaključak}
+
+Tokom rada su analizirani i pronađeni nedostaci sistema koji trenutno postoje kod firme Duma Group. Detaljno su opisani slučajevi upotrebe što omogućava razumevanje funkcionisanja jednog ovakvog sistema. Napravljena je šema baze podataka, predložena je arhitektura sistema i neki od procesa su prikazani UML dijagramima. Kreiran je predlog kako bi trebalo da izgleda korisnički interfejs koji koriste klijenti ove firme i prototip koji pruža sliku o potencijalima našeg sistema. Dalji rad bi podrazumevao razvoj samog sistema. 
+
+Rad na projektu se pokazao kao značajan za ceo tim jer smo kroz njega stekli iskustvo rada u timu i znanje koje će nam pomoći, kako u spremanju samog ispita, tako i u radu na nekim narednim projektima. 
+
+
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

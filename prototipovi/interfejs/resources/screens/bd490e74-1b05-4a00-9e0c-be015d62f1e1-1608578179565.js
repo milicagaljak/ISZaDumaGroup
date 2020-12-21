@@ -1,4 +1,34 @@
 jQuery("#simulation")
+  .on("click", ".s-bd490e74-1b05-4a00-9e0c-be015d62f1e1 .click", function(event, data) {
+    var jEvent, jFirer, cases;
+    if(data === undefined) { data = event; }
+    jEvent = jimEvent(event);
+    jFirer = jEvent.getEventFirer();
+    if(jFirer.is("#s-Rectangle_1")) {
+      cases = [
+        {
+          "blocks": [
+            {
+              "actions": [
+                {
+                  "action": "jimNavigation",
+                  "parameter": {
+                    "target": "screens/924ebe8e-0181-48fd-813c-43b8884bbff4"
+                  },
+                  "exectype": "serial",
+                  "delay": 0
+                }
+              ]
+            }
+          ],
+          "exectype": "serial",
+          "delay": 0
+        }
+      ];
+      event.data = data;
+      jEvent.launchCases(cases);
+    }
+  })
   .on("mouseup", ".s-bd490e74-1b05-4a00-9e0c-be015d62f1e1 .mouseup", function(event, data) {
     var jEvent, jFirer, cases;
     if(data === undefined) { data = event; }
