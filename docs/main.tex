@@ -295,8 +295,8 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 1 PB.jpg}
-    \caption{Dijagram aktivnosti - Odabir ponude}
+    \includegraphics[width=12cm]{Veronika/DijagramSekvence_OdabirPonude.jpg}
+    \caption{Dijagram sekvence - Odabir ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
 
@@ -1009,8 +1009,8 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \item Glavni tok:
         \begin{enumerate}
             \item Klijent se prijavljuje na sistem firme Duma Group.
-            \item Klikom na sekciju 'račun' klijent ima uvid u ukupnu cenu usluge, koja je bila ažurirana tokom vršenja usluge.
-            \item Klijent klikom da dugme 'plaćanje' dobija formular koji popunjava podacima koji nedostaju kako bi izvršio uplatu.
+            \item Klijent ima uvid u ukupnu cenu usluge, koja je bila ažurirana tokom vršenja usluge.
+            \item Klijent klikom da dugme 'plati' dobija formular koji popunjava podacima koji nedostaju kako bi izvršio uplatu.
             \item Klijent potvrđuje uplatu.
             \item Sistem vrši validaciju uplate.
             \item Sistem beleži uslugu kao uspešno regulisanu i čisti se sekcija 'račun' za klijenta.
@@ -1021,7 +1021,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
-            \item Podaci koje klijent treba da popuni su ime, prezime, adresa i broj žiro računa.
+            \item Podaci koje klijent treba da popuni su ime, prezime, adresa i broj računa.
         \end{itemize}
 \end{itemize}
 
@@ -1076,17 +1076,23 @@ Izvedeni entiteti naše baze podataka su:
     \item pol\_osobe
 \end{itemize}
 
+\vspace{3mm}
+
 \textbf{Zaposleni} predstavlja specijalizaciju entiteta korisnik. On predstavlja osobe koje su zaposlene u firmi Duma Group. Atributi:
 \begin{itemize}
     \item id\_zaposlenog - id zaposlenog koji predstavlja strani kluč ka entitetu Korisnik
     \item vrsta\_zaposlenog - koja je vrsta zaposlenog u pitanju(Osoblje, Menadžer, Administrator...)
 \end{itemize}
 
+\vspace{3mm}
+
 \textbf{Menadžer} predstavlja specijalizaciju entiteta Zaposleni. On predstavlja osobu koja je zadužena za komunikaciju sa klijentom prilikom pravljenja narudžbine i za prenošenje detalja narudžbine osoblju. Atributi:
 \begin{itemize}
     \item id\_menadžera - id zaposlenog koji predstavlja strani kluč ka entitetu Zaposleni
     \item tip\_menadžera - za koju uslugu je ovaj menadžer zadužen(Ketering, Prenosivi bar, Fotografija) 
 \end{itemize}
+
+\vspace{3mm}
 
 \textbf{Osoblje} predstavlja specijalizaciju entiteta Zaposleni. Osoblje čine osobe koje rade na samom događaju, kao što su barmeni, fotografi, šef kuhinje i dostavljač Atributi:
 \begin{itemize}
