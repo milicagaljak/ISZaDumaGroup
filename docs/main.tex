@@ -160,10 +160,10 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Prilikom 2. koraka glavnog toka klijent odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja, vraća ga na 2. korak glavnog toka i onemogućava dalji tok registracije dok klijent ne prihvati date uslove.
-            \item Prilikom 4. koraka glavnog toka ukoliko klijent nije uneo ispravne podatke, sistem obaveštava klijenta i proces se nastavlja od 3. koraka glavnog toka
-            \item Ukoliko klijent nije prihvatio aktivacionu poruku u 7. koraku glavnog toka u određenom vremenskom periodu, sistem briše nalog i proces se završava.
-            \item Ukoliko u 7. koraku glavnog toka klijent nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku i proces se nastavlja od koraka 6. glavnog toka
+            \item Korak 2 - klijent odbija uslove korišćenja sistema. Sistem obaveštava korisnika da mora da prihvati date uslove korišćenja, vraća ga na 2. korak glavnog toka i onemogućava dalji tok registracije dok klijent ne prihvati date uslove.
+            \item Korak 4 - ukoliko klijent nije uneo ispravne podatke, sistem obaveštava klijenta i proces se nastavlja od 3. koraka glavnog toka
+            \item Korak 7 - Ukoliko klijent nije prihvatio aktivacionu poruku u određenom vremenskom periodu, sistem briše nalog i proces se završava.
+            \item Korak 7 - Ukoliko klijent nije primio aktivacionu poruku on obaveštava sistem da mu ponovo pošalje poruku i proces se nastavlja od koraka 6. glavnog toka
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -174,7 +174,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{Miloš/Miloš_Dijagrami_aktivnosti_slike/Dijagram_aktivnosti_Registrovanje.jpg}
+    \includegraphics[width=15cm]{Miloš/Miloš_Dijagrami_aktivnosti_slike/Dijagram_aktivnosti_Registrovanje.jpg}
     \caption{Dijagram aktivnosti - Registrovanje korisnika}
     \label{fig:Registracija aktivnost}
 \end{figure}
@@ -220,10 +220,10 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{enumerate}
     \item Alternativni tok:
         \begin{itemize}
-            \item Ukoliko u 1. koraku glavnog toka korisnik ne može da se seti podataka za prijavljivanje obaveštava sistem da mu pošalje mail za oporavak. Sistem šalje mail korisniku, korisnik proverava mail i menja podatke u skladu sa instrukcijama koje je dobio u mailu. Sistem čuva izmene koje je korisnik napravio a proces se nastavlja od 1. koraka glavnog toka.
-            \item Ukoliko u 3. koraku glavnog toka korisnički podaci nisu ispravni, sistem obaveštava korisnika o grešci i postavlja brojač neuspešnih pokušaja.
+            \item Korak 1 - Ukoliko korisnik ne može da se seti podataka za prijavljivanje obaveštava sistem da mu pošalje mail za oporavak. Sistem šalje mail korisniku, korisnik proverava mail i menja podatke u skladu sa instrukcijama koje je dobio u mailu. Sistem čuva izmene koje je korisnik napravio a proces se nastavlja od 1. koraka glavnog toka.
+            \item Korak 3 - Ukoliko korisnički podaci nisu ispravni, sistem obaveštava korisnika o grešci i postavlja brojač neuspešnih pokušaja.
             Ako je brojač prethodno postavljen, njegova vrednost se uvećava za jedan. Proces se nastavlja od 2. koraka glavnog toka.
-            \item Ukoliko sistem u 3. koraku glavnog toka određen broj puta ne uspe da validira korisničke podatke postavlja zabranu prijavljivanja za tog korisnika na određeni vremski period. Nakon isteka zabrane izvršavanje se nastavlja od 2. koraka glavnog toka.
+            \item Korak 3 - Ukoliko sistem određen broj puta ne uspe da validira korisničke podatke postavlja zabranu prijavljivanja za tog korisnika na određeni vremski period. Nakon isteka zabrane izvršavanje se nastavlja od 2. koraka glavnog toka.
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -235,7 +235,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
 
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{Miloš/Miloš_Dijagrami_aktivnosti_slike/Dijagram_aktivnosti_Prijavljivanje.jpg}
+    \includegraphics[width=15cm]{Miloš/Miloš_Dijagrami_aktivnosti_slike/Dijagram_aktivnosti_Prijavljivanje.jpg}
     \caption{Dijagram aktivnosti - Prijavljivanje korisnika}
     \label{fig:Prijavljivanje aktivnost}
 \end{figure}
@@ -422,76 +422,40 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \begin{enumerate}
            \item Menadžer preko sistema šalje izabranu ponudu osoblju tako što odabere u sistemu sve one koji trebaju biti angažovani na događaju i na njihove naloge pošalje koja su im zaduženja
 		   \item Osoblje preko svojih naloga preuzima detalje o ponudi
-	       \item Osoblje proverava u sistemu da li je sve potrebno za događaj dostupno u magacinu i ako jeste priprema ono što je potrebno
-	        \item Osoblje pakuje sav pripremljeni sadržaj u prevozno sredstvo tako da bezbedno stigne na dogovorenu lokaciju 
+	       \item Osoblje priprema neohodne flaše pića, prenosivi bar i dekoraciju
+	       \item Osoblje pakuje sav pripremljeni sadržaj u prevozno sredstvo tako da bezbedno stigne na dogovorenu lokaciju
+	       \item Osoblje beleži u sistemu da je sve spremno za dostavu
+	       \item Sistem šalje obaveštenje dostavljaču da dostava može da počne
         \end{enumerate}
-    \item Alternativni tok:
-        \begin{itemize}
-            \item Koraci 3 - Nešto od potrebnog sadržaja nije dostupno u magacinu. U tom slučaju zadatak menadžera je da zaduži nekog od osoblja da nabavi to što je neophodno.
-        \end{itemize}
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 2 PB.jpg}
+    \includegraphics[width=16cm]{Veronika/Dijagram aktivnosti 2 PB.jpg}
     \caption{Dijagram aktivnosti - Priprema ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
 
 
-\subsubsection{Dostava ponude}
+\subsubsection{Dostava ponude i posluživanje gostiju}
 
 \begin{itemize}
     \item Kratak opis:
         \begin{itemize}
-            \item Ponuda je dovezena na potrebnu lokaciju i spremna za posluživanje
+            \item Ponuda je dovezena na potrebnu lokaciju i spremna za posluživanje gostiju koje obavlja barmen
         \end{itemize}
     \item Učesnici:
         \begin{itemize}
             \item Dostavljač
             \item Osoblje
-        \end{itemize}
-    \item Preduslov:
-        \begin{itemize}
-            \item Sva potrebna roba je spakovana u prevozno sredstvo
-		    \item Dostavljač je na raspolaganju	
-        \end{itemize}
-    \item Postuslov:
-        \begin{itemize}
-            \item Sve je postavljeno po dogovoru i spremno za početak događaja
-        \end{itemize}
-    \item Glavni tok:
-        \begin{enumerate}
-            \item Dostavljač preuzima informaciju iz sistema gde treba odvesti porudžbinu i osoblje zaduženo za postavljanje
-           \item Dostavljač odvozi robu i osoblje na dogovorenu adresu sat vremena pre početka događaja 
-		    \item Osoblje montira prenosivi bar i dekoriše ga onako kako je u sistemu zabeleženo da je korisnik zahtevao
-        \end{enumerate}
-    
-\end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 3 PB.jpg}
-    \caption{Dijagram aktivnosti - Dostava ponude}
-    \label{fig:PrenosiviBar}
-\end{figure}
-
-\subsubsection{Posluživanje gostiju}
-
-\begin{itemize}
-    \item Kratak opis:
-        \begin{itemize}
-            \item Gosti dolaze do šanka gde im barmen sipa pića i pravi odgovarajuće koktele 
-        \end{itemize}
-    \item Učesnici:
-        \begin{itemize}
             \item Gosti
-            \item Barmen
+            \item Barmen 
         \end{itemize}
     \item Preduslov:
         \begin{itemize}
-            \item Barmen je dobio detalje o mestu i vremenu održavanja događaja
-            \item Dostavljač je dovezao na događaj sve ono što je barmenu potrebno za pripremanje pića
+		    \item Dostavljač je na raspolaganju
+		     \item Dostavljač je dobio obaveštenje od sistema da dostava može da počne
+		    \item Barmen je dobio detalje o mestu i vremenu održavanja događaja
         \end{itemize}
     \item Postuslov:
         \begin{itemize}
@@ -500,25 +464,26 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
-            \item Barmen dolazi na odgovarajuću adresu koja mu je poslata preko sistema i priprema se za posao
+            \item Dostavljač preuzima informaciju iz sistema gde treba odvesti porudžbinu i osoblje zaduženo za postavljanje
+           \item Dostavljač odvozi robu i osoblje na dogovorenu adresu sat vremena pre početka događaja 
+		    \item Osoblje montira prenosivi bar i dekoriše ga onako kako je u sistemu zabeleženo da je korisnik zahtevao
+		    \item Barmen dolazi na odgovarajuću adresu koja mu je poslata preko sistema i priprema se za posao
             \item Barmen iz sistema čita spisak pića koje je klijent naručio i proverava da li mu je dostavljeno sve što je naručeno
            \item Gost dolazi do šanka i naručuje piće od barmena
 		   \item Barmen uslužuje gosta i beleži u sistem koje je piće naručeno
 		   \item Sistem dodaje cenu tog pića na račun korisnika
-		  \end{enumerate}
-		\textit{Koraci 3,4,5 se ponavljaju za svakog gosta koji priđe šanku sve do kraja događaja}
-	
-    \item Alternativni tok:
+        \end{enumerate}
+     \item Alternativni tok:
         \begin{itemize}
-	      \item	Korak 5 - Piće koje gost traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i gost bira jedno od njih.
-
-        \end{itemize}
+	      \item	Korak 6 - Piće koje gost traži je u međuvremenu popijeno. U tom slučaju barmen preporučuje gostu neka druga pića koja su dostupna i gost bira jedno od njih.  
+	      \end{itemize}
 \end{itemize}
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 4 PB.jpg}
-    \caption{Dijagram aktivnosti - Posluživanje gostiju}
+    \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 3 PB.jpg}
+    \caption{Dijagram aktivnosti - Dostava ponude}
     \label{fig:PrenosiviBar}
 \end{figure}
 
@@ -1072,7 +1037,7 @@ Izvedeni entiteti naše baze podataka su:
 
 \textbf{Klijent} predstavlja specijalizaciju entiteta korisnik. On predstavlja osobe koje uzimaju usluge firme Duma Group. Atributi:
 \begin{itemize}
-    \item id\_klijenta - id klijenta koji predstavlja strani kluč ka entitetu korisnik
+    \item id\_klijenta - id klijenta koji predstavlja strani kluč ka entitetu korisnik, a ujedno i primarni ključ ove tabele
     \item broj\_kartice - broj kartice klijenta pomoću kog će izvršiti plaćanje
     \item datum\_rođenja
     \item pol\_osobe
@@ -1082,7 +1047,7 @@ Izvedeni entiteti naše baze podataka su:
 
 \textbf{Zaposleni} predstavlja specijalizaciju entiteta korisnik. On predstavlja osobe koje su zaposlene u firmi Duma Group. Atributi:
 \begin{itemize}
-    \item id\_zaposlenog - id zaposlenog koji predstavlja strani kluč ka entitetu Korisnik
+    \item id\_zaposlenog - id zaposlenog koji predstavlja strani kluč ka entitetu Korisnik, a ujedno i primarni ključ ove tabele
     \item vrsta\_zaposlenog - koja je vrsta zaposlenog u pitanju(Osoblje, Menadžer, Administrator...)
 \end{itemize}
 
@@ -1090,7 +1055,7 @@ Izvedeni entiteti naše baze podataka su:
 
 \textbf{Menadžer} predstavlja specijalizaciju entiteta Zaposleni. On predstavlja osobu koja je zadužena za komunikaciju sa klijentom prilikom pravljenja narudžbine i za prenošenje detalja narudžbine osoblju. Atributi:
 \begin{itemize}
-    \item id\_menadžera - id zaposlenog koji predstavlja strani kluč ka entitetu Zaposleni
+    \item id\_menadžera - id zaposlenog koji predstavlja strani kluč ka entitetu Zaposleni, a ujedno i primarni ključ ove tabele
     \item tip\_menadžera - za koju uslugu je ovaj menadžer zadužen(Ketering, Prenosivi bar, Fotografija) 
 \end{itemize}
 
@@ -1098,7 +1063,7 @@ Izvedeni entiteti naše baze podataka su:
 
 \textbf{Osoblje} predstavlja specijalizaciju entiteta Zaposleni. Osoblje čine osobe koje rade na samom događaju, kao što su barmeni, fotografi, šef kuhinje i dostavljač Atributi:
 \begin{itemize}
-    \item id\_osoblja - id zaposlenog koji predstavlja strani kluč ka entitetu Zaposleni
+    \item id\_osoblja - id zaposlenog koji predstavlja strani kluč ka entitetu Zaposleni, a ujedno i primarni ključ ove tabele
     \item pozicija\_osoblja - koji član osoblja je u pitanju(barmen, fotograf, šef kuhinje, dostavljač) 
 \end{itemize}
 
@@ -1148,9 +1113,9 @@ Agregirani entiteti naše baze podataka su:
 
 \textbf{Priprema\_narudžbine} Sadrži informacije o pripremi narudžbine, i o detaljima njenim detaljima, kao i o posebnim zahtevima korisnika. Atributi:
 \begin{itemize}
-    \item id\_menadžera - id menadžera firme, koji predstavlja strani ključ ka entitetu Menadžer
-    \item id\_narudžbine - id narudžbine koja je poručena, strani ključ ka entitetu Narudžbina
-    \item id\_osoblja - id osoblja koje priprema narudžbinu, strani ključ ka entitetu Osoblje
+    \item id\_menadžera - id menadžera firme, koji predstavlja strani ključ ka entitetu Menadžer, a ujedno i deo primarnog ključa ove tabele
+    \item id\_narudžbine - id narudžbine koja je poručena, strani ključ ka entitetu Narudžbina, a ujedno i deo primarnog ključa ove tabele
+    \item id\_osoblja - id osoblja koje priprema narudžbinu, strani ključ ka entitetu Osoblje, a ujedno i deo primarnog ključa ove tabele
     \item instrukcija\_za\_osoblje - detaljan opis narudžbine i opis zadataka koje osoblje treba da ispuni
     \item procenjeno\_vreme - očekivano vreme za pripremu narudžbine
     
@@ -1172,8 +1137,8 @@ Agregirani entiteti naše baze podataka su:
 
 Kako bi se pojednostavilo rukovanje bazom podataka, uveden je i pogled \textbf{Plaćanje}. Ovaj pogled sadrži sve detalje koji su potrebni kako bi klijent obavio plaćanje svog računa. Atributi:
 \begin{itemize}
-    \item datum\_plaćanja - datum kada je održan događaj za koji se plaća usluga, koji predstavlja primarni ključ ovog entiteta
-    \item id\_klijenta - id klijenta koji obavlja plaćanje, koji predstavlja strani ključ ka entitetu Klijent
+    \item datum\_plaćanja - datum kada je održan događaj za koji se plaća usluga, koji predstavlja deo primarnog ključa ovog pogleda
+    \item id\_klijenta - id klijenta koji obavlja plaćanje, koji predstavlja strani ključ ka entitetu Klijent, a ujedno i deo primarnog ključa ovog pogleda
     \item ime\_korisnika 
     \item ukupni\_račun - ukupni račun koji dobijemo kada saberemo cene svega onoga što je klijent naručio
     \item plaćeno - govori nam da li je račun izmiren ili ne (vrednost je 0 ako nije, 1 ako jeste)
