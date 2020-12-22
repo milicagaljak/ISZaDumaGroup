@@ -81,15 +81,14 @@
 
 \section{Analiza sistema}
 
-Firma Duma Group se bavi organizovanjem proslava i događaja. U firminoj ponudi nalaze se brojne usluge čiji je cilj da obezbedi korisnicima sve ono što im je za njihove događaje potrebno. Među ovim uslugama su ketering, fotograf, prenosivi bar, slatki sto...
+Firma Duma Group se bavi organizovanjem proslava i događaja. U firminoj ponudi nalaze se brojne usluge čiji je cilj da obezbedi korisnicima sve ono što im je za njihove događaje potrebno. Među ovim uslugama su ketering, fotograf i prenosivi bar.
 
 Prilikom formiranja ovog informacionog sistema poseban akcenat ćemo staviti na mađusobnu komunikaciju zaposlenih u firmi, kao i na komunikaciju sa klijentima, jer je to od velikog značaja za unapređenje firme.
     
-Korisnici se registruju na sajt nakon čega stupaju u kontakt sa menadžerima firme. Menadžer treba od korisnika da dobije informacije o događaju koji korisnik pravi kako bi mu predložio adekvatnu uslugu. Nakon toga menadžer prenosi osoblju korisnikove želje. 
-Ukoliko se korisnik opredeli za usluge keteringa ili prenosivog bara, osoblje ima zadatak da pripremi sadržaj koji je korisnik tražio i zadovolji sve njegove potrebe. Dostavljači nakon toga dostavljaju korisniku sav sadržaj.
-Ukoliko se korisnik opredeli za usluge fotografa dogovaraju se svi potrebni detalji nakon čega fotografi pripremaju potrebnu opremu za događaj. Na dan događaja odlaze na mesto održavanja gde fotografišu i snimaju korisnika i njegove goste. Nakon toga sledi izrada fotografija. 
+Klijenti mogu da naprave svoj nalog na sajtu i svojom prijavom dobija mogućnost naručivanja određenih usluga. On popunjava potrebne informacije vezane za događaj, a zatim menadžer organizuje osoblje po klijentovoj narudžbini. Ukoliko se klijent opredeli za usluge keteringa ili prenosivog bara, osoblje ima zadatak da pripremi sadržaj koji je klijent tražio i zadovolji sve njegove potrebe. Dostavljači nakon toga dostavljaju sav potreban sadržaj.
+Ukoliko se klijent opredeli za fotografiju, fotografi pripremaju potrebnu opremu za događaj i na dan događaja odlaze na mesto održavanja gde fotografišu i snimaju korisnika i njegove goste. Nakon toga sledi izrada fotografija. 
     
-Osnovna svrha sistema je da omogući korisnicima da njihov događaj izgleda onako kako su zamislili i da mu za njega budu dostupne sve usluge koje su im potrebne. 
+Osnovna svrha sistema je da omogući klijentima da njihov događaj izgleda onako kako su zamislili i da mu za njega budu dostupne sve usluge koje su im potrebne. 
 
 Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     
@@ -240,6 +239,104 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \caption{Dijagram aktivnosti - Prijavljivanje korisnika}
     \label{fig:Prijavljivanje aktivnost}
 \end{figure}
+
+%Ovo je moj deo - Nina
+
+
+\subsection{Rad sa zaposlenima}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{Nina/Slucaj upotrebe rad sa zaposlenima.jpg}
+    \caption{Dijagram slučaja upotrebe Rad sa zaposlenima}
+    \label{fig:RegistracijaZ}
+\end{figure}
+
+\subsubsection{Registracija zaposlenog}
+
+\begin{itemize}
+    \item Kratak opis: 
+    \begin{itemize}
+        \item Administrator registruje zaposlenog koji nema otvoren nalog u sistem Duma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
+    \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+        \item Administrator
+        \item Zaposleni
+    \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Zaposleni nema kreiran nalog.
+            \item Sistem je u funkciji.
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Zaposleni je registrovan i dobija informacije kako da ga koristi.
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Zaposleni popunjava obrazac sa potrebnim podacima za registraciju.
+            \item Zaposleni predaje obrazac administratoru.
+            \item Administrator proverava da li su podaci validni.
+            \item Administrator popunjava formular sa podacima koje je dobio.
+            \item Administrator bira poziciju zaposlenog.
+            \item Sistem šalje obaveštenje administratoru da potvrdi unos.
+            \item Administrator potvrđuje podatke klikom na dugme.
+            \item Sistem obaveštava administratora da je uspešno registrovan nalog.
+            \item Administrator šalje zaposlenom uputstvo za korišćenje sistema.
+        \end{enumerate}
+    \item Alternativni tokovi:
+        \begin{itemize}
+            \item Korak 3 - Ukoliko je obrazac nepravilno popunjen (nedostaju neki podaci), administrator obaveštava zaposlenog gde je napravljena greška kako bi je ispravio. Proces se nastavlja u koraku 1.
+        \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm, height=7cm]{Nina/DijagramAktivnostiRegistracijaZaposlenog.jpg}
+    \caption{Dijagram aktivnosti registracije zaposlenog}
+    \label{fig:RegistracijaZ}
+\end{figure}
+
+
+\subsubsection{Brisanje naloga zaposlenog}
+
+\begin{itemize}
+    \item Kratak opis: 
+    \begin{itemize}
+        \item Briše se nalog zaposlenog sa kojim je prekinut radni odnos.
+    \end{itemize}
+    \item Učesnici:
+        \begin{itemize}
+        \item Menadžer za ketering/fotografiju/prenosivi bar
+        \item Administrator
+    \end{itemize}
+    \item Preduslovi:
+        \begin{itemize}
+            \item Sa zaposlenim je prekinut radni odnos.
+            \item Sistem je u funkciji.
+        \end{itemize}
+    \item Postuslovi:
+        \begin{itemize}
+            \item Nalog je obrisan.
+        \end{itemize}
+    \item Glavni tok:
+        \begin{enumerate}
+            \item Menadžer šalje zahtev administratoru da obriše nalog.
+            \item Administrator pokreće postupak brisanja naloga zaposlenog klikom na dugme za brisanje.
+            \item Administrator popunjava informacije o tome da li je zaposleni svojevoljno dao otkaz ili ne.
+            \item Administrator potvrđuje brisanje.
+            \item Sistem potvrđuje nalog kao obrisan.
+        \end{enumerate}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm, height=5cm]{Nina/Dijagram_aktivnosti_brisanje_naloga.jpg}
+    \caption{Dijagram aktivnosti brisanja naloga}
+    \label{fig:RegistracijaZ}
+\end{figure}
+
 
 %Ovo je moj deo - Veronika
 
@@ -423,100 +520,6 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
     \includegraphics[width=14cm]{Veronika/Dijagram aktivnosti 4 PB.jpg}
     \caption{Dijagram aktivnosti - Posluživanje gostiju}
     \label{fig:PrenosiviBar}
-\end{figure}
-
-\subsection{Rad sa zaposlenima}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=8cm]{Nina/Slucaj upotrebe rad sa zaposlenima.jpg}
-    \caption{Dijagram slučaja upotrebe Rad sa zaposlenima}
-    \label{fig:RegistracijaZ}
-\end{figure}
-
-\subsubsection{Registracija zaposlenog}
-
-\begin{itemize}
-    \item Kratak opis: 
-    \begin{itemize}
-        \item Administrator registruje zaposlenog koji nema otvoren nalog u sistem Duma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
-    \end{itemize}
-    \item Učesnici:
-        \begin{itemize}
-        \item Administrator
-        \item Zaposleni
-    \end{itemize}
-    \item Preduslovi:
-        \begin{itemize}
-            \item Zaposleni nema kreiran nalog.
-            \item Sistem je u funkciji.
-        \end{itemize}
-    \item Postuslovi:
-        \begin{itemize}
-            \item Zaposleni je registrovan i dobija informacije kako da ga koristi.
-        \end{itemize}
-    \item Glavni tok:
-        \begin{enumerate}
-            \item Zaposleni popunjava obrazac sa potrebnim podacima za registraciju.
-            \item Zaposleni predaje obrazac administratoru.
-            \item Administrator proverava da li su podaci validni.
-            \item Administrator popunjava formular sa podacima koje je dobio.
-            \item Administrator bira poziciju zaposlenog.
-            \item Sistem šalje obaveštenje administratoru da potvrdi unos.
-            \item Administrator potvrđuje podatke klikom na dugme.
-            \item Sistem obaveštava administratora da je uspešno registrovan nalog.
-            \item Administrator šalje zaposlenom uputstvo za korišćenje sistema.
-        \end{enumerate}
-    \item Alternativni tokovi:
-        \begin{itemize}
-            \item Korak 3 - Ukoliko je obrazac nepravilno popunjen (nedostaju neki podaci), administrator obaveštava zaposlenog gde je napravljena greška kako bi je ispravio. Proces se nastavlja u koraku 1.
-        \end{itemize}
-\end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=10cm]{Nina/DijagramAktivnostiRegistracijaZaposlenog.jpg}
-    \caption{Dijagram aktivnosti registracije zaposlenog}
-    \label{fig:RegistracijaZ}
-\end{figure}
-
-
-\subsubsection{Brisanje naloga zaposlenog}
-
-\begin{itemize}
-    \item Kratak opis: 
-    \begin{itemize}
-        \item Briše se nalog zaposlenog sa kojim je prekinut radni odnos.
-    \end{itemize}
-    \item Učesnici:
-        \begin{itemize}
-        \item Menadžer za ketering/fotografiju/prenosivi bar
-        \item Administrator
-    \end{itemize}
-    \item Preduslovi:
-        \begin{itemize}
-            \item Sa zaposlenim je prekinut radni odnos.
-            \item Sistem je u funkciji.
-        \end{itemize}
-    \item Postuslovi:
-        \begin{itemize}
-            \item Nalog je obrisan.
-        \end{itemize}
-    \item Glavni tok:
-        \begin{enumerate}
-            \item Menadžer šalje zahtev administratoru da obriše nalog.
-            \item Administrator pokreće postupak brisanja naloga zaposlenog klikom na dugme za brisanje.
-            \item Administrator popunjava informacije o tome da li je zaposleni svojevoljno dao otkaz ili ne.
-            \item Administrator potvrđuje brisanje.
-            \item Sistem potvrđuje nalog kao obrisan.
-        \end{enumerate}
-\end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=8cm]{Nina/Dijagram_aktivnosti_brisanje_naloga.jpg}
-    \caption{Dijagram aktivnosti brisanja naloga}
-    \label{fig:RegistracijaZ}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
