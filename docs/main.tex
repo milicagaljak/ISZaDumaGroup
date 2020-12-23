@@ -103,12 +103,12 @@ Na slici \ref{fig:Tok} je prikazan dijagram konteksta informacionog sistem.
 \end{figure}
 
 \newpage
-Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
+Na slici \ref{fig:Tok} je prikazan dijagram toka podataka nivoa 0.
     
     \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm, height=14cm]{Nina/Data Flow Diagram1.jpg}
-    \caption{Dijagram toka podataka}
+    \includegraphics[width=15cm, height=14cm]{Milica/Dijagram_Toka_Podataka.jpg}
+    \caption{Dijagram toka podataka nivoa 0}
     \label{fig:Tok}
 \end{figure}
     
@@ -856,21 +856,20 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
           \begin{enumerate}
               
         
-              \item U zavisnosti od vrste hrane koja je naručena i sposobnostima osoblja, podeljeni su zadaci osoblju od strane šefa kuhinje. Svako od osoblja ima na aplikaciji koji je njegov deo posla, kao i koji su delovi posla ostalih članova u timu. 
+              \item Šef kuhinje, u zavisnosti od vrste hrane koja je naručena i sposobnostima osoblja, zadaje zadatke osoblju. Svako od osoblja ima na aplikaciji koji je njegov deo posla, kao i koji su delovi posla ostalih članova u timu. 
         
               \item Svako od osoblja procenjuje koliko vremena je potrebno da izvrši zadati posao i  unosi procenjeno vreme u aplikaciju.
          
-              \item U zavisnosti od procenjenog vremena osoblja i zakazanog termina dogadjaja, šef kuhinje zakazuje početak radnog vremena.
+              \item Šef kuhinje, u zavisnosti od procenjenog vremena osoblja i zakazanog termina dogadjaja, zakazuje početak radnog vremena.
        
-              \item U dogovoreno vreme, svako od osoblja počinje sa izvršavanjem svog dela posla.
+              \item Svako od osoblja, u dogovoreno vreme,  počinje sa izvršavanjem svog dela posla i priprema ketering.
           
-              \item Ketering je spreman za dostavljanje.
           \end{enumerate}
     \end{itemize}
       \begin{itemize}
         \item Alternativni tok:
           \begin{itemize}
-        \item -Korak 3.- Ukoliko procenjeno vreme završavanja posla prekorači zakazano vreme događaja, šef kuhinje šalje zahtev osoblju koje je odbilo zahtev menadžera a bilo je raspoloživo za datum događaja. Proces se nastavlja u koraku 3.
+        \item -Korak 3.- Ukoliko procenjeno vreme završavanja posla prekorači zakazano vreme događaja, šef kuhinje pronalazi putem aplikacije potrebno osoblje. Jedan od načina za to je da šef kuhinje šalje zahtev osoblju koje je odbilo zahtev menadžera a bilo je raspoloživo za datum događaja. Proces se nastavlja u koraku 3.
     \end{itemize}
     \end{itemize}
     
@@ -926,26 +925,20 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka.
           \begin{enumerate}
           
               \item Menadžer šalje zahtev dostavljaču preko aplikacije sa detaljima isporuke.
+              
+              \item Dostavljač prima zahtev i informacije o dostavi.
           
               \item Dostavljač potvrđuje da li je slobodan da dostavi porudžbinu ili ne.
               
-              \item Dostavljač se informiše kako može da dođe na lokaciju događaja.Dostavljač uzima u obzir nepredviđene okolnosti na putu i obračunava vreme polaska shodno tome.
-        
-              \item Dostavljač procenjuje koliko mu je vremena potrebno da dostavi porudžbinu.
+              \item Dostavljač vrši dostavu. Prvo se informiše kako može da dođe na lokaciju događaja, zatim uzima u obzir nepredviđene okolnosti na putu i obračunava vreme polaska shodno tome. Dostavljač procenjuje koliko mu je vremena potrebno da dostavi porudžbinu. U zavisnosti od procenjenog vremena dostavljač određuje vreme polaska, prevozi poručen ketering i stiže u dogovoreno vreme.
          
-              \item U zavisnosti od procenjenog vremena dostavljač određuje vreme polaska.
-      
-              \item Dostavljač prevozi poručen ketering.
-         
-              \item Dostavljač stiže u dogovoreno vreme.
-         
-              \item Klijent preuzima isporuku.
+              \item Klijent preuzima porudžbinu.
           \end{enumerate}
     \end{itemize}
       \begin{itemize}
         \item Alternativni tok:
           \begin{itemize}
-        \item -Korak 2.-Ukoliko dostavljač da negativan odgovor, menadžer šalje zahtev drugom dostavljaču. Proces se nastavlja u koraku 2.
+        \item -Korak 2.-Ukoliko dostavljač da negativan odgovor, menadžer pronalazi drugog dostavljača putem aplikacije. Proces se nastavlja u koraku 2.
     \end{itemize}
     \end{itemize}
     
@@ -1274,7 +1267,7 @@ Na slici \ref{fig:ki_prijava} je prikazan način na koji se korisnik prijavljuje
 
 \subsection{Profil klijenta}
 
-Nakon što se klijent prijavio, na ekranu će mu biti prikazana strana \ref{fig:ki_profil} na kojoj se nalaze informacije o korisniku koje je naveo pri registraciji i slika koju može da promeni. Takođe, klikom na neko od dugmića \say{Ketering},  \say{Fotografija} ili \say{Prenosivi bar} korisnik može da odabere uslugu za koju je zainteresovan. Na profilu se nalazi i ukupno zaduženje za usluge koje je klijent odabrao, kao i link \say{PLATI} ka stranici za izmirivanje tog zaduženja.
+Nakon što se klijent prijavio, na ekranu će mu biti prikazana strana \ref{fig:ki_profil} na kojoj se nalaze informacije o korisniku koje je naveo pri registraciji i slika koju može da promeni. Takođe, klikom na jedno od tri dugmeta, \say{Ketering},  \say{Fotografija} ili \say{Prenosivi bar}, korisnik može da odabere uslugu za koju je zainteresovan. Na profilu se nalazi i ukupno zaduženje za usluge koje je klijent odabrao, kao i link \say{PLATI} ka stranici za izmirivanje tog zaduženja.
 
 
 \begin{figure}[H]
