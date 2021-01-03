@@ -236,7 +236,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka nivoa 0.
             \item Korak 1 - Ukoliko korisnik ne može da se seti podataka za prijavljivanje obaveštava sistem da mu pošalje mail za oporavak. Sistem šalje mail korisniku, korisnik proverava mail i menja podatke u skladu sa instrukcijama koje je dobio u mailu. Sistem čuva izmene koje je korisnik napravio a proces se nastavlja od 1. koraka glavnog toka.
             \item Korak 3 - Ukoliko korisnički podaci nisu ispravni, sistem obaveštava korisnika o grešci i postavlja brojač neuspešnih pokušaja.
             Ako je brojač prethodno postavljen, njegova vrednost se uvećava za jedan. Proces se nastavlja od 2. koraka glavnog toka.
-            \item Korak 3 - Ukoliko sistem određen broj puta ne uspe da validira korisničke podatke postavlja zabranu prijavljivanja za tog korisnika na određeni vremski period. Nakon isteka zabrane izvršavanje se nastavlja od 2. koraka glavnog toka.
+            \item Korak 3 - Ukoliko sistem određen broj puta ne uspe da validira korisničke podatke postavlja zabranu prijavljivanja za tog korisnika na određeni vremenski period. Nakon isteka zabrane izvršavanje se nastavlja od 2. koraka glavnog toka.
         \end{itemize}
     \item Dodatne informacije:
         \begin{itemize}
@@ -270,7 +270,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka nivoa 0.
 \begin{itemize}
     \item Kratak opis: 
     \begin{itemize}
-        \item Administrator registruje zaposlenog koji nema otvoren nalog u sistem Duma Group. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
+        \item Administrator registruje zaposlenog koji nema otvoren nalog. Sistem izvršava validaciju i vraća potvrdu o registraciji, ukoliko je uspešna.
     \end{itemize}
     \item Učesnici:
         \begin{itemize}
@@ -284,7 +284,7 @@ Na slici \ref{fig:Tok} je prikazan dijagram toka podataka nivoa 0.
         \end{itemize}
     \item Postuslovi:
         \begin{itemize}
-            \item Zaposleni je registrovan i dobija informacije kako da ga koristi.
+            \item Zaposleni je registrovan i dobija informacije kako da koristi sistem.
         \end{itemize}
     \item Glavni tok:
         \begin{enumerate}
@@ -1136,7 +1136,7 @@ Odabrana je Veb aplikacija jer pruža visok stepen dostupnosti i ažurnosti, jer
 \begin{enumerate}
     \item Tip aplikacije: Veb aplikacija
     \item Strategija isporučivanja: Jedan serverski i više klijentskih računara
-    \item Tehnologije: Angular framework, NodeJS, Java, nerelaciona baza podataka
+    \item Tehnologije: Angular framework, NodeJS, Java, relaciona baza podataka
 \end{enumerate}
 
 \subsection{Tip i slojevi sistema}
